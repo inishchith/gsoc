@@ -62,7 +62,7 @@ Issues opened:
 
 ### Community Bonding - May
 
-+ Post 1 [ Coming Soon.. ]
++ [Accepted for GSoC 2019 & 1st Meeting ](https://inishchith.github.io/blog/2019/05/introduction.html)
 
 <br>
 

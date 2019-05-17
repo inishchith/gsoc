@@ -1,0 +1,79 @@
+<inishchith> Hi everyone!
+<jgbarah> Hi!!!
+<valcos> Hi @inishchith
+<valcos> how are you doing ?
+<inishchith> I'm good, how are you?
+<jgbarah> It seems Pranjal had some unexpected issue, and cannot join today.
+<jgbarah> So, we can start, i think
+<inishchith> Oh. Okay.
+<jgbarah> (Fine, thank you two ;-) )
+<inishchith> :)
+<valcos> I'm fine, thanks!
+<jgbarah> I think this is going to be quick. The idea is to check a bit for the coordination means, answer your questions, and (if needed) schedule activities during the community bounding period
+<jgbarah> For coordination, I guess you already got a message with the list of means that we intend to use, am I right?
+<inishchith> Yes jgbarah. In the last email ( regarding scheduling this meeting ) Pranjal had shared the guidelines and some notes. Which i found really helpful and have taken a note of it.
+<inishchith> About creating a repository for all the work, Yes in coming days i'll plan of a proper structure of it, make setup and share it with you all.
+<valcos> Perfect, thanks @inishchith
+<inishchith> I like the idea of having a blog post hence, i have setup a repository for weekly blog posts will update it according and share the link :)
+<valcos> Great! Do you have some questions/comments wrt the guidelines proposed by Pranjal ?
+<inishchith> As of now, Not much. I'll take some time to plan the structure of repository and only clarification i needed was about the issue ticket for sub-tasks. Is it okay if i create issue tickets in the corresponding change repository with some and according keep a log at my ( new ) repository?
+<inishchith> *with some information. such as supporting Pull request, blog post and more
+<jgbarah> If it is related to work with Graal or GrimoireLab in general, i think it would be good to have issues in the corresponding GL repos.
+<jgbarah> this will allow anyone to become familiar with your plans and progress.
+<jgbarah> If it mostly about stuff related to your personal work (say, for example, "set up a blog for GSoC", maybe it is better to use your own repo...
+<jgbarah> Is that what you were asking for?
+<inishchith> Yes. jgbarah, by corresponding change repository i meant to say related to GL repos. Thanks for the clarity, and Yes, I'll make sure to follow that.
+<inishchith> Yes. Thanks :)
+<jgbarah> OK, good
+<jgbarah> For now, I think you can just open an issue in the chaoss/governance repo, mentioning the communication means we're going to have, and you can link in it,
+<jgbarah> when you have it, your blog. Later on we can also open a specific file to summarize your progress there.
+<inishchith> Yes, sure. I'll open a issue ticket after this meeting:)
+<inishchith> jgbarah, valcos i had a question regarding moving forward with the proposal of metrics to the working group ( as i last addressed )
+<jgbarah> As a general rule, after all meetings, please get a copy of the log of the meeting, and add it to the corresponding blog post.
+<jgbarah> This way we have everything linked together. since you still don't have a blog (AFAIK),
+<jgbarah> you can save this for future reference, send it to us via email, and when you write your first post, explaining your project and all that,
+<jgbarah> you can include it in that post.
+<inishchith> jgbarah, i see Pranjal had a log (.txt) in his repo with the IRC conversations. I'll make sure to link the conversations on my blog post to the corresponding text log file. Is that way okay?
+<jgbarah> Yes!
+<jgbarah> inishchith: what is your question?
+<inishchith> I had opened an issue ticket here some time back and wanted to have a discussion related to it with further procedure. Proposal of metrics at https://github.com/chaoss/metrics/issues/139 . Can you explain to me how does proposal of metrics and it's acceptance work so that i get some clarity?
+<jgbarah> OK, I see. Let me explain,
+<jgbarah> Proposals for new metrics, or for changes to current ones, are discussed in working groups.
+<jgbarah> Each working group is dealing with some focus areas, which are their "areas of interest". New, related areas of interest can be proposed for a wg,
+<jgbarah> but that requires a bit of a "higher level" discussion, mainly to avoid too much overlapping between wgs.
+<jgbarah> Then, for each of the focus areas, workign groups define goals of what they want to understand, and then specific questions for each goal.
+<jgbarah> As a final step, metrics that help to understand those goals are defined.
+<jgbarah> In the case of the metrics you are proposing, they are structured more like a list of metrics.
+<jgbarah> This is the right approach for discussing how to implement them in Graal.
+<jgbarah> But for the working groups, the first thing is to know in which wg and focus area they could feet, and then work top-down to see how those metrics could be appropriate
+<jgbarah> The idea is to try to have metrics that are useful to answer questions to help to reach some goal of understanding,
+<jgbarah> as opposed to have just a bag of metrics.
+<jgbarah> Is it more clear now?
+<inishchith> Yes, Thanks jgbarah.
+<jgbarah> In any case, during the progress of the GSoC work, we could work on that in the context of some specific wgs.
+<jgbarah> For example, maybe we could open a new focus area in the Evolution working group about licensing and code ownership.
+<jgbarah> And maybe some other about the evolution of complexity and other metrics...
+<jgbarah> But maybe we better start this process after you finish your exams?
+<jgbarah> (and likely some other wg could also be interested)
+<inishchith> Yes. jgbarah. Sound good. So in order to propose metrics to the working group. Can we go ahead with opening an individual issue ticket for each metrics which currently do not exist in the metrics repository and have further discussion there? please correct me if i'm wrong.
+<jgbarah> We should first propose to open a new focus area (at least in the case of Evolution).
+<jgbarah> If you want, we could for example start with those related to licensing and code ownership (the focus area could be "Licensing and Authorship", for example),
+<jgbarah> in wg-evolution. What do you think?
+<inishchith> Yes. That would be better i feel.
+<jgbarah> Good!
+<jgbarah> Anything else, valcos, inishchith?
+<inishchith> No, That's it :)
+<valcos> No, thanks @jgbarah @<inishchith>
+<jgbarah> Great!
+<inishchith> valcos, i was currently working on adding scancli option to CoLic Backend
+<inishchith> i've shared my log on the issue thread. please do have a look when you have time. Thanks :)
+<jgbarah> Then, inishchith, please email us the log of the meeting, open that issue, and let us know when you have the blog open, hopefully with the first post about GSoC
+<jgbarah> (of course, it can be a blog of yours, with other content, as far as you can provide a link to the list of posts specific for GSoC)
+<jgbarah> We will let you know about the date for a kickstart meeting, later on.
+<valcos> sure @inishchith, I'll check the issue today
+<inishchith> Sure jgbarah! Thanks
+<jgbarah> Thank you very much to both of you
+<inishchith> Thanks valcos :)
+<jgbarah> Bye!
+<inishchith> Thanks, Bye!
+<valcos> Bye!
