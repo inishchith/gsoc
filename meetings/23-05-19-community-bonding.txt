@@ -1,0 +1,141 @@
+[17:05] == inishchith [7aaaacf7@gateway/web/freenode/ip.122.170.172.247] has joined #grimoirelab
+[17:11] == aswanipranjal_ [uid293292@gateway/web/irccloud.com/x-mpwlfldbbccqstwr] has joined #grimoirelab
+[17:16] <inishchith> Hi everyone
+[17:17] <aswanipranjal_> Hey @inishchith
+[17:17] <aswanipranjal_> How are you doing?
+[17:17] <inishchith> Hi, I'm good. how are you?
+[17:17] <aswanipranjal_> I am fine too, thanks!
+[17:18] <aswanipranjal_> How are you managing your exams? All good?
+[17:18] <jgbarah> Hi!
+[17:19] <aswanipranjal_> Hey @jgbarah!
+[17:19] <inishchith> aswanipranjal_ Yes. My college schedule is a bit different from the usual ones, so have to manage it that way ;)
+[17:19] <inishchith> Hi jgbarah :)
+[17:19] <aswanipranjal_> good to know @inishchith
+[17:21] <inishchith> :) I think we should wait for valcos to join.
+[17:21] <aswanipranjal_> I have a meeting at work now, so I won't be able to attend this meeting.
+[17:21] <aswanipranjal_> Please continue
+[17:22] <inishchith> aswanipranjal_. Sure, No worries.
+[17:22] <inishchith> jgbarah: any idea when valcos would join?
+[17:25] <jgbarah> I was hoping that he was already here...
+[17:26] <jgbarah> Let me ping him in other channels
+[17:26] <inishchith> Oh. Okay.
+[17:26] <jgbarah> I know he left for an hour, but that was long time ago...
+[17:27] <jgbarah> Let's wait for a moment, and if he doesn't join, i think we better cancel the meeting, because he is the one knowing more what to do with graal...
+[17:27] <jgbarah> aswanipranjal_: is this ok with you?
+[17:28] <aswanipranjal_> sure @jgbarah
+[17:31] <jgbarah> I'm pinging him to no avail, for now. Please, let's wait for 5 more min...
+[17:31] == valcos [~valcos@90.161.151.76] has joined #grimoirelab
+[17:31] <jgbarah> Hi, valcos!"
+[17:31] <jgbarah> We were missing you ,-)
+[17:31] <inishchith> Hi, valcos!
+[17:31] <valcos> Hi jgbarah, inishchith, aswanipranjal
+[17:32] <valcos> sorry for being late
+[17:33] <inishchith> no worries ;)
+[17:33] <inishchith> just an update from last time. I've setup my blog with the initial blogpost here ( https://inishchith.github.io/blog/ )  and a project-tracker repository here ( https://github.com/inishchith/gsoc-graal )
+[17:35] <valcos> great, thanks inishchith
+[17:35] <valcos> Polaris000 should join us too, right ?
+[17:36] <jgbarah> No, he is joining tomorrow
+[17:36] <jgbarah> Have a look at the email ;-)
+[17:36] <jgbarah> It seems today it was impossible for him
+[17:37] <valcos> ok
+[17:38] <jgbarah> valcos: can you drive the meeting, since you're the most knowledgeable in graal?
+[17:38] <valcos> sure!
+[17:39] <valcos> Inishchith has been contributing to graal for some while
+[17:39] <valcos> he provided some fixes and some new analyzers/backends
+[17:40] <valcos> so the first step should be to understand how to integrate graal with ELK and mordred
+[17:40] <jgbarah> Yes, I know. I think the important stuff for today is to define and schedule the work for the next few days
+[17:41] <jgbarah> If possible, let's try to define also a weekly slot for having coordination meetings via irc
+[17:42] <inishchith> yes jgbarah. Sorry, i think we were supposed to decide that in the last meeting. i forgot to raise it. we can do that today
+[17:42] <valcos> Inishchith, have you checked ELK and mordred already ?
+[17:42] <valcos> because this could be a task for the next days
+[17:43] <valcos> what do you think ?
+[17:44] <inishchith> valcos: during the application period, i did setup and run the components to get an idea on how the work for a gist. i couldn't have a deeper look. so i think you're right. i can pick next days for experimenting with them and understand how they work
+[17:45] <valcos> I can send some details by email
+[17:45] <inishchith> Also even when running them i had doubts, so i had got them cleared on the ideas page ( #182 on grimoirelab ) and made a note of it. so i'll be have look at the codebase now.
+[17:45] <inishchith> Sure valcos that would really help me . Thanks
+[17:45] <valcos> the codebase of elk and mordred can be tricky :)
+[17:46] <valcos> maybe we can use this task to provide some general instructions to play with grimoirelab
+[17:46] <inishchith> I've made a tree on my local notes app. It's a bit confusing, i think once i'll be free from exams ( tomorrow ). i'll have more time to learn how they work
+[17:47] <inishchith> Sounds great valcos.
+[17:47] <valcos> great!
+[17:48] <inishchith> valcos jgbarah. do you mind if i suggest a schedule for weekly meetings via irc ?
+[17:48] <valcos> sure, go ahead
+[17:50] <valcos> when would you like to have the weekly meetings ?
+[17:50] <inishchith> We can have meeting scheduled for friday ( any slot ) to update what work was done and to discuss kind of improvements in it. which will help me work on them over weekend. And every monday the blopost goes up.
+[17:51] <valcos> I'm fine with your proposed scheduling
+[17:51] <valcos> what do you think @jgbarah @aswanipranjal ?
+[17:51] <inishchith> Thanks valcos. what do you think jgbarah?
+[17:53] <valcos> while @jgbarah answers, we can discuss a bit more the tasks for the next days
+[17:53] <inishchith> sure! valcos
+[17:53] <valcos> I was thinking that it could be good to open an issue to explain how to start playing with grimoirelab
+[17:54] <valcos> there, we could share the docker-compose (that contains elasticsearch and kibana)
+[17:54] <valcos> some details about micro-mordred (which is a simplified version of mordred)
+[17:54] <valcos> and maybe also some details to set up pycharm to work with grimoirelab components
+[17:55] <valcos> what do you think @inishchith ?
+[17:55] <jgbarah> Friday is ok with me, as long as it is in the range 12:30-14:30 (valcos, rmember that before 12:30 we usually have the internal seminars)
+[17:55] <jgbarah> valcos: It would be great having a chapter or section about that in the tutorial
+[17:56] <jgbarah> Right now, we have some text about how to do it with single containers (grimoirelab/installed, for example)
+[17:56] <valcos> thank you @jgbarah for the reminder
+[17:56] <jgbarah> but nothing with separate containers, via docker-compose
+[17:57] <jgbarah> In general, i wouls suggest that we improve the introductory chapters in the tutorial, so that they are more user-friendly
+[17:57] <jgbarah> But I'm happy with opening an issue, discussing and writing the stuff in it, and the work on pull requests on the tutorial
+[17:57] <jgbarah> People, I have to leave now. I'll read the log later. Please, try to arrange for that weekly meeting, and remember that it would
+[17:58] <inishchith> valcos: i like the idea. i think we can open an issue, dicuss and then open a PR at grimoirelab-tutorial for the same. what do you think?
+[17:58] <inishchith> discuss*
+[17:58] <jgbarah> be great if both GrimoireLab-related students in GSoc can have meeting the same day, one after the other,
+[17:58] <jgbarah> so that each one can attend easily the meeting for the other one, in case there are common issues
+[17:58] <jgbarah> See you!
+[17:59] == jgbarah [~jgb@193.147.77.69] has quit [Quit: Leaving.]
+[17:59] <valcos> bye @jgbarah
+[17:59] <inishchith> bye jgbarah.
+[17:59] <valcos> yes @inishchith you can open an issue
+[18:00] <inishchith> sure. valcos :)
+[18:00] <inishchith> I was also thinking after tomorrow (exams end), for the next three to four days to learn how grimoirelab-elk uses ElasticSearch to store data in raw and enrich indexes. I've got an initial setup ( of all he components ) which I used to understand the working during the application period,
+[18:00] <valcos> maybe the outcome for the next days could be to improve the beginning of the tutorial
+[18:00] <valcos> that sounds great
+[18:02] <inishchith> Thanks valcos. so along with that i've to manage the tutorial part as you explained above via an issue. which i'll be kick-starting on saturday ( day after tomorrow ).
+[18:02] <valcos> perfect!
+[18:03] <valcos> if it can be of any help, we can organize a live demo
+[18:03] <inishchith> yes. that would be great.
+[18:03] <valcos> so I can show you how the grimoirelab components work
+[18:03] <valcos> like a webinar
+[18:04] <inishchith> it would be great if you could take time for that. i'll be up for it :). I think we can have it once the coding period starts on 27th. what do you think?
+[18:04] <valcos> as @jgbarah mentioned before, it could be great if the sync meeting can be the same day with the other student (Aniruddha)
+[18:05] <valcos> the 27th is perfect
+[18:05] <valcos> we could try to have also Aniruddha in the webinar, it may be helpful for him too
+[18:06] <inishchith> Sure. :)
+[18:06] <valcos> I can send an email to schedule the webinar
+[18:06] <valcos> I will do it after this meeting :)
+[18:07] <inishchith> sure! valcos
+[18:07] <inishchith> valcos: as we're only a few days away from the start. any suggestions on project-tracker[https://github.com/inishchith/gsoc-graal] ( any section to be added / removed ) .
+[18:07] <valcos> going back to some messages before, you proposed that the sync meeting should on Friday
+[18:07] <inishchith> Yeah.
+[18:08] <valcos> would you be available on another day, in case Aniruddha is not available on Friday ?
+[18:09] <inishchith> Sure valcos. wouldn't be a problem. It was just a proposal. we can alter it :)
+[18:09] <valcos> perfect, thanks @inishchith
+[18:10] <valcos> wrt the time, 13h30 could be ok ?
+[18:10] <inishchith> Yes!
+[18:10] <valcos> Great!
+[18:11] <valcos> wrt the project-tracker , it looks perfect
+[18:12] <inishchith> thanks!
+[18:12] <valcos> maybe for each week, you could create a folder
+[18:13] <valcos> so then it will be easier to follow the work done
+[18:13] <valcos> (the folder can be created at the end of each week) what do you think ?
+[18:14] <inishchith> I'm not clear as to what would that folder exactly contain?
+[18:16] <valcos> a summary of the work done during the week, maybe with some links to PRs or issues
+[18:17] <inishchith> Oh. sure valcos. that sounds great!.
+[18:17] <valcos> anyway, no worries, we can discuss aobut it later :)
+[18:18] <valcos> just to recap what discussed so far
+[18:19] <valcos> - Sync meeting: Friday at 13h30 (other days are possible in case Aniruddha cannot on Friday)
+[18:19] <valcos> - Next days you will have a look at ELK and Mordred (just ping if you need any help)
+[18:20] <inishchith> yes. sure :)
+[18:20] <valcos> - You should open an issue to improve the tutorial (introduction) to show how to play with GrimoireLab components
+[18:21] <valcos> - Organize the webinar next week (suggested day Monday 27th)
+[18:21] <valcos> Am i missing something or are there other things to add to the list ?
+[18:22] <inishchith> I think that's it.
+[18:22] <valcos> perfect!
+[18:22] <valcos> thank you for your time @inishchith
+[18:23] <inishchith> thanks valcos. bye then :) I'll mail the meeting log.
+[18:23] <valcos> and sorry again for being late
+[18:23] <inishchith> No worries ;)
+[18:23] <valcos> bye! yes, please
