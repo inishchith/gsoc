@@ -44,6 +44,7 @@ Pull requests created:
 Issues opened:
 1. [chaoss/grimoirelab-graal#18](https://github.com/chaoss/grimoirelab-graal/issues/18): [discussion] Improvements in existing analyzers and additions **`/ap`**
 2. [chaoss/grimoirelab-graal#27](https://github.com/chaoss/grimoirelab-graal/issues/27): [colic] Add scancode_cli option to CoLic Backend **`/cb`**
+3. [chaoss/grimoirelab-tutorial#84](https://github.com/chaoss/grimoirelab-tutorial/issues/84): [components] How to play with Grimoirelab components **`/cp1`**
 
 **#** **Repository: metrics**
 
