@@ -38,7 +38,7 @@
 **#** **Repository: grimoirelab-graal**
 
 Pull requests created:
-1.  [chaoss/grimoirelab-graal#29](https://github.com/chaoss/grimoirelab-graal/pull/29): [colic] Add support of scancode_cli to colic backend  **`/cp1`**
+1. [chaoss/grimoirelab-graal#29](https://github.com/chaoss/grimoirelab-graal/pull/29): [colic] Add support of scancode_cli to colic backend  **`/cp1`**
 
 
 Issues opened:
@@ -57,20 +57,24 @@ Issues opened:
 > **c**ommunity **b**onding period : **`/cb`** <br>
 > **c**oding **p**eriod **x** - **`/cpx`** <br>
 
+
+- **Do check issue tracker in current repository for some more info.**
+
 <br>
 
 ## # Weekly Summary
 
 ### Community Bonding - May
 
-+ [Accepted for GSoC 2019 & 1st Meeting ](https://inishchith.github.io/blog/2019/05/introduction.html)
++ [Accepted for GSoC 2019 & 1st Meeting](https://inishchith.github.io/blog/2019/05/introduction.html)
++ [A kick start meeting](https://inishchith.github.io/blog/2019/05/community-bonding-2.html)
 
 <br>
 
 ## # Would like to sync?
 
 + We have planned to keep all the communication open 🎉 so that everyone can sync and is free to participate and help us grow! So if you have suggestions / comments about anything please do not hesitate to open up an [issue ticket](https://github.com/inishchith/gsoc-graal/issues).
-+ We will be discussing about the progress of this project every week at the **`#grimoirelab`** channel on FREENODE IRC ( scheduled timings will be added here soon.. ). The transcripts of the meetings (chats) are available in **`/meetings`** directory.
++ We will be discussing about the progress of this project every week at the **`#grimoirelab`** channel on FREENODE IRC (scheduled for every Friday 12:30 CEST or 16:00 IST). The transcripts of the meetings (chats) are available in **`/meetings`** directory.
 + There will be a weekly [blog post](https://inishchith.github.io/blog) as you might have noticed the weekly-summary log above which i'll make sure to also post on the [mailing lists](https://lists.linuxfoundation.org/mailman/listinfo/oss-health-metrics) of CHAOSS.
 
 <br>
