@@ -49,7 +49,7 @@ Issues opened:
 
 Pull requests created:
 1. [chaoss/grimoirelab-tutorial#86](https://github.com/chaoss/grimoirelab-tutorial/pull/86): [graal] Add Graal to the Sidebar **`/cp1`**
-2. [chaoss/grimoirelab-tutorial#87](https://github.com/chaoss/grimoirelab-tutorial/pull/87): [micro-mordred] Add tutorial for exectution of Micro-Mordred via Docker-Compose **`/cp1`**
+2. [chaoss/grimoirelab-tutorial#87](https://github.com/chaoss/grimoirelab-tutorial/pull/87): [micro] Add tutorial for exectution of Micro-Mordred via Docker-Compose **`/cp1`**
 
 Issues opened:
 1. [chaoss/grimoirelab-tutorial#84](https://github.com/chaoss/grimoirelab-tutorial/issues/84): [components] How to play with Grimoirelab components **`/cp1`**
@@ -80,7 +80,7 @@ Issues opened:
 
 ### Coding Period 1 - May 28th to June 28th, 2019
 
-+ [ Week #1: TBA ]()
++ Week #1: [Summary](./work/week1) | [Blog Post: TBA]()
 
 <br>
 
