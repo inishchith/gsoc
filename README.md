@@ -44,7 +44,16 @@ Pull requests created:
 Issues opened:
 1. [chaoss/grimoirelab-graal#18](https://github.com/chaoss/grimoirelab-graal/issues/18): [discussion] Improvements in existing analyzers and additions **`/ap`**
 2. [chaoss/grimoirelab-graal#27](https://github.com/chaoss/grimoirelab-graal/issues/27): [colic] Add scancode_cli option to CoLic Backend **`/cp1`**
-3. [chaoss/grimoirelab-tutorial#84](https://github.com/chaoss/grimoirelab-tutorial/issues/84): [components] How to play with Grimoirelab components **`/cp1`**
+
+**#** **Repository: grimoirelab-tutorial**
+
+Pull requests created:
+1. [chaoss/grimoirelab-tutorial#86](https://github.com/chaoss/grimoirelab-tutorial/pull/86): [graal] Add Graal to the Sidebar **`/cp1`**
+2. [chaoss/grimoirelab-tutorial#87](https://github.com/chaoss/grimoirelab-tutorial/pull/87): [micro-mordred] Add tutorial for exectution of Micro-Mordred via Docker-Compose **`/cp1`**
+
+Issues opened:
+1. [chaoss/grimoirelab-tutorial#84](https://github.com/chaoss/grimoirelab-tutorial/issues/84): [components] How to play with Grimoirelab components **`/cp1`**
+
 
 **#** **Repository: metrics**
 
@@ -64,10 +73,14 @@ Issues opened:
 
 ## # Weekly Summary
 
-### Community Bonding - May
+### Community Bonding - May 6th to May 27th, 2019
 
 + [Accepted for GSoC 2019 & 1st Meeting](https://inishchith.github.io/blog/2019/05/introduction.html)
 + [A kick start meeting](https://inishchith.github.io/blog/2019/05/community-bonding-2.html)
+
+### Coding Period 1 - May 28th to June 28th, 2019
+
++ [ Week #1: TBA ]()
 
 <br>
 
