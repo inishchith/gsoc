@@ -1,0 +1,109 @@
+[15:51] == inishchith [7aaaacf7@gateway/web/freenode/ip.122.170.172.247] has joined #grimoirelab
+[15:56] == valcos [~valcos@pct-empresas-136.uc3m.es] has joined #grimoirelab
+[15:56] <inishchith> Hi valcos aswanipranjal :)
+[15:56] <valcos> Hi @inishchith @aswanipranjal
+[15:56] <valcos> how are you doing ?
+[15:57] <inishchith> I'm good :) How are you?
+[15:57] <valcos> fine, thanks!
+[15:58] <_ilias_opensuse> Hi everybody. I am using the Docker image (grimoirelab/full) from Dockerhub (and according to https://chaoss.github.io/grimoirelab-tutorial/basics/dockerhub.html) but I am not able to analyze private (my own ones) repositories from Bitbucket. Is there any idea/hint about that? Help appreciated!Thanks
+[15:58] <_ilias_opensuse> Hi again everybody. I am using the Docker image (grimoirelab/full) from Dockerhub (and according to https://chaoss.github.io/grimoirelab-tutorial/basics/dockerhub.html) but I am not able to analyze private (my own ones) repositories from Bitbucket. Is there any idea/hint about that? Help appreciated!Thanks
+[15:59] <valcos> Hi _ilias_opensuse, thank you for using grimoirelab
+[16:00] <valcos> which error do you get ?
+[16:00] <_ilias_opensuse> I am not getting an error. I am not getting any piece of data :)
+[16:01] <aswanipranjal> Hey @inishchith, @valcos! Sorry about being late :)
+[16:01] <_ilias_opensuse> I have tried to launch the docker image with a Bitbuck public repository and works. But with private not.
+[16:01] <valcos> @_ilias_opensuse would you mind open an issue at https://github.com/chaoss/grimoirelab
+[16:01] <valcos> ?
+[16:02] <valcos> @inishchith @aswanipranjal @jgb are going to start a meeting here in a couple of minutes
+[16:03] <valcos> sorry for the inconvenience @_ilias_opensuse
+[16:03] <_ilias_opensuse> it is ok
+[16:03] <valcos> thanks! :)
+[16:04] <_ilias_opensuse> If I don't create an issue on Github, I will write again here the upcoming week.
+[16:04] <_ilias_opensuse> in order to provide more details. Actually I am not using Github any more.  I have switched to Gitlab recently.
+[16:05] <_ilias_opensuse> My "saludos" to @jbg from Ilias and to other Bitergia guys. Thanks for the help.
+[16:09] == jgbarah [~jgb@163.117.64.8] has joined #grimoirelab
+[16:09] <jgbarah> Sorry for my delay, people!
+[16:09] <inishchith> Hi! No, worries :)
+[16:09] <jgbarah> Did you started already?
+[16:10] <valcos> no @jgbarah
+[16:10] <valcos> @_ilias_opensuse sure! thanks!
+[16:11] <jgbarah> Can we start, then?
+[16:11] <_ilias_opensuse> thanks @valcos
+[16:11] <valcos> @inishchith
+[16:11] <inishchith> Yes. @jgbarah @valcos :)
+[16:12] <valcos> if you agree, you could start
+[16:12] <jgbarah> Let's go then ;-)
+[16:12] <valcos> could you resume the work done and the issues you found (if any) ?
+[16:13] <inishchith> I'll share updates from the work done in this week if you guys agree ?
+[16:13] <aswanipranjal> yes please @inishchith
+[16:14] <valcos> yes please :) (I guess my last message got lost)
+[16:14] <inishchith> 1. Some work on adding "support of scancode_cli to colic backend" was left for some time, the PR after code review by valcos, was merged this week (on Monday) :)
+[16:15] <inishchith> 2. I had opened an issue ticket on "How to play with Grimoirelab components" under grimoirelab-tutorial repository and explained how I worked on the task with some screenshot. valcos conducted a Webinar this week (on tuesday), as you all might know, that really helped me understand the working of the toolchain and added some clarity to the task.
+[16:17] <inishchith> I faced an issue regarding setting up the docker-compose instance ( specifically the elasticsearch instance not intantiating  properly,) after some discussion and sharing of docker-logs could figure out the issue.
+[16:18] <inishchith> 3. Eventually, I opened a PR for adding a tutorial for the execution of Micro-Mordred via Docker-Compose. ( adding the notes for the problems that i faced) .
+[16:19] <inishchith> That's it. Now i'm waiting for review  on PRs #86 and #87 on the grimoirelab-tutorial repository :)
+[16:19] <valcos> thanks @inishchith. wrt 2. the full video is not available due to the storage limit in dropbox
+[16:20] <inishchith> Yes. as i attended the complete Webinar, i could recollect. and the presentation (slides) are also helpful
+[16:20] <valcos> cool!
+[16:21] <valcos> the two PRs in the grimoirela-tutorial repo will be reviewed soon :)
+[16:21] <valcos> we can move to the work for the next week, if you all agree
+[16:21] <inishchith> Sure. No worries valcos. Just wanted to address as there might be some additional sections to be added in the tutorial for micro-mordred :)
+[16:22] <aswanipranjal> sure @valcos. Thanks for this week's update @inishchith!
+[16:22] <valcos> perfect, thanks
+[16:22] <inishchith> Also on last week's meeting, valcos suggested adding a directory under project-tracker repository for summary of work done in the week. I've added the same and Week1 summary is here (https://github.com/inishchith/gsoc-graal/tree/master/work/week1)
+[16:23] <valcos> great, thanks @inishchith
+[16:23] <valcos> for next week, we could focus on two tasks
+[16:23] <valcos> the first one could target the understanding of the kibana dashboards and visualizations
+[16:24] <valcos> if needed, we can organize another webinar
+[16:24] <valcos> so you will know how to create a dashboard and different visualizations, how to export and import them
+[16:25] <valcos> the second task could target an initial exploration of ELK and mordred
+[16:25] <valcos> to see how to integrate graal
+[16:25] <valcos> what do you think @inishchith @aswanipranjal @jgbarah?
+[16:26] <inishchith> valcos, wrt first task, i've got a basic understanding of it and was thinking to understand it better for the coming weekend. so It'd be great to have a Webinar just like we had last week. would be really helpful for me
+[16:27] <valcos> ok, perfect. I'll send an email later to agree on a date/timeframe
+[16:27] <jgbarah> I find that reasonable, in general
+[16:28] <aswanipranjal> sounds good @valcos
+[16:29] <valcos> ok, great!
+[16:29] <valcos> @inishchith do you want to comment something on the second task ?
+[16:30] <inishchith> Oh. Sorry, i missed the message. :(
+[16:30] <aswanipranjal> > the second task could target an initial exploration of ELK and mordred
+[16:30] <aswanipranjal> 4:25 PM to see how to integrate graal
+[16:30] <valcos> no worries :)
+[16:31] <inishchith> Sounds good valcos. ( Thanks aswanipranjal :) )
+[16:31] <inishchith> I'll open an issue ticket for discussion if you agree ?
+[16:31] <valcos> perfect!
+[16:31] <inishchith> Thanks :)
+[16:32] <jgbarah> A minor comment: it would be great having your blog post (or a draft of it) before our weekly meetings
+[16:32] <jgbarah> That way we can just read it, and go straight to the meat
+[16:32] <jgbarah> (just a suggestion ;-) )
+[16:33] <inishchith> Agree on that jgbarah. That would be great. I've just got the summary up here (https://github.com/inishchith/gsoc-graal/tree/master/work/week1). but i'll make sure to have a blog post up before next meeting
+[16:33] <inishchith> next meeting and following :)
+[16:34] <valcos> great:) anything left to discuss @jgbarah @inishchith @aswanipranjal?
+[16:34] <aswanipranjal> Thanks @inishchith
+[16:35] <inishchith> That's it from my side. would like to have suggestions ( if any ) valcos :)
+[16:36] <jgbarah> Thanks, inishchith !
+[16:37] <valcos> no suggestion, I think you are doing great :)
+[16:37] <inishchith> Thanks valcos. I'll keep things updated and ask doubts in the issue ticket (for discussion) if any.
+[16:38] <inishchith> for the next task
+[16:38] == Polaris000 [~Polaris00@124.123.75.129] has joined #grimoirelab
+[16:38] <jgbarah> Thans a lot, inishchith !
+[16:38] <valcos> thanks @inishchith!
+[16:38] <Polaris000> Hi all!
+[16:38] <jgbarah> Polaris000: it seems we're done with inishchith's meeting, so from my side, we could start yours right now
+[16:38] <inishchith> You're welcome valcos jgbarah
+[16:38] <Polaris000> Great @jgbarah
+[16:39] <valcos> Hi Polaris000
+[16:39] <inishchith> Hi Aniruddha :) How are you doing
+[16:39] <aswanipranjal> I agree with @valcos, good work till now inishchith!
+[16:39] <Polaris000> I am great!
+[16:39] <jgbarah> (Hi, Polaris000, btw ;-) )
+[16:39] <aswanipranjal> Hey Polaris000!
+[16:39] <Polaris000> :)
+[16:39] <inishchith> aswanipranjal valcos jgbarah : I'll mail the meeting logs to you now
+[16:39] <jgbarah> Yes, please, inishchith, thanks!
+[16:39] <aswanipranjal> sure, thanks
+[16:40] <valcos> yes, please!
+[16:41] <jgbarah> inishchith: please CC the grimoirelab mailing list when you send the link to the blog post, and include a link to the logs in that blog post, please
+[16:41] <jgbarah> Polaris000: can we start then? ( valcos aswanipranjal: is it good for you to start now? )
+[16:41] <valcos> sure @jgbarah
+[16:42] <inishchith> sure jgbarah. :)
