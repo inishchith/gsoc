@@ -80,7 +80,7 @@ Issues opened:
 
 ### Coding Period 1 - May 28th to June 28th, 2019
 
-+ Week #1: [Summary](./work/week1) | [Blog Post: TBA]()
++ Week #1: [Summary](./work/week1) | Blog Post: [[week-1] Learning how micro-mordred works..](https://inishchith.github.io/blog/2019/06/coding-period-1-1.html)
 
 <br>
 
