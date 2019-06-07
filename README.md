@@ -38,12 +38,15 @@
 **#** **Repository: grimoirelab-graal**
 
 Pull requests created:
-1. [chaoss/grimoirelab-graal#29](https://github.com/chaoss/grimoirelab-graal/pull/29): [colic] Add support of scancode_cli to colic backend  **`/cp1`**
+1. [chaoss/grimoirelab-graal#29](https://github.com/chaoss/grimoirelab-graal/pull/29): [colic] Add support of scancode_cli to colic backend **`/cp1`**
+2. [chaoss/grimoirelab-graal#32](https://github.com/chaoss/grimoirelab-graal/pull/32): [graal] Derive `git_path` from `uri` **`/cp1`**
+3. [chaoss/grimoirelab-graal#34](https://github.com/chaoss/grimoirelab-graal/pull/34): [logger] Switch `info` logger level to `debug` **`/cp1`**
 
 
 Issues opened:
 1. [chaoss/grimoirelab-graal#18](https://github.com/chaoss/grimoirelab-graal/issues/18): [discussion] Improvements in existing analyzers and additions **`/ap`**
 2. [chaoss/grimoirelab-graal#27](https://github.com/chaoss/grimoirelab-graal/issues/27): [colic] Add scancode_cli option to CoLic Backend **`/cp1`**
+3. [chaoss/grimoirelab-graal#33](https://github.com/chaoss/grimoirelab-graal/issues/33): [graal] Checkout log an issue in case of large repositories **`/cp1`**
 
 **#** **Repository: grimoirelab-tutorial**
 
@@ -81,6 +84,7 @@ Issues opened:
 ### Coding Period 1 - May 28th to June 28th, 2019
 
 + Week #1: [Summary](./work/week1) | Blog Post: [[week-1] Learning how micro-mordred works..](https://inishchith.github.io/blog/2019/06/coding-period-1-1.html)
++ Week #2: [Summary](./work/week2) | Blog Post: [[week-2] Evaluating approaches and Initial integration of Graal](https://inishchith.github.io/blog/2019/06/coding-period-1-2.html)
 
 <br>
 

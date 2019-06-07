@@ -1,0 +1,141 @@
+[15:53] == inishchith [7aaaacf7@gateway/web/freenode/ip.122.170.172.247] has joined #grimoirelab
+[15:54] <inishchith> Hi valcos aswanipranjal :)
+[15:58] <valcos> Hi inishchith
+[15:58] <valcos> how are you doing ?
+[15:59] <inishchith> I'm good. How are you?
+[15:59] <valcos> fine, thanks!
+[15:59] <valcos> @jgbarah should join soon
+[16:00] <inishchith> Oh. Okay!
+[16:01] <aswanipranjal> Hey Nishchith, Valerio!
+[16:02] <valcos> how are you @aswanipranjal
+[16:02] <valcos> ?
+[16:02] <aswanipranjal> I am good Valerio. Thanks! How are you guys?
+[16:03] <inishchith> Hi aswanipranjal, I'm good :)
+[16:03] <aswanipranjal> Great!
+[16:03] <valcos> Fine thanks
+[16:06] <valcos> shall we start ?
+[16:07] <aswanipranjal> Sure
+[16:07] <inishchith> Sure!.
+[16:07] <valcos> great!
+[16:07] <valcos> @inishchith could you summarize the work done this week and the problem you found ?
+[16:08] <inishchith> Sure!.
+[16:08] <valcos> thanks
+[16:09] <inishchith> Briefly after the last meeting, i started exploring ELK in context of Grimoirelab and how it works.
+[16:10] <inishchith> My task as discussed in the last meeting was to propose and approach for integration of Graal with ELK & Mordred along with understanding how to create visualization, exporting, importing and working with them.
+[16:11] <inishchith> After this comment ( https://github.com/inishchith/gsoc-graal/issues/4#issuecomment-498040045 ). @valcos had pushed some code for my reference for integrating Graal's CoCom backend with ELK.
+[16:12] <inishchith> I could successfully execute ELK & Kibiter after making similar changes and was experimenting with visualizations
+[16:13] <inishchith> And yesterday we had a webinar where @valcos gave briefing about visualizations and some related utilities. That helped me in understanding and working on second task.
+[16:14] <inishchith> The blockers for this weeks task is one which is mentioned here (https://github.com/inishchith/gsoc-graal/issues/6) about what we intend to visualize
+[16:14] <inishchith> Accordingly we have to adapt the results produced by Graal (if needed) or in enriched index of the appropriate backend.
+[16:15] <valcos> thank you @inishchith
+[16:15] <inishchith> And the working branch of initial integration can be found here (https://github.com/inishchith/grimoirelab-elk)
+[16:16] <aswanipranjal> Thanks for the updates Nishchith
+[16:16] <inishchith> you're welcome @valcos , @aswanipranjal
+[16:17] <valcos> which visualizations about the cocom data could be useful in your opinion @inishchith and @aswanipranjal ?
+[16:17] <valcos> currently the cocom backend returns info just for the files in each commit
+[16:18] <valcos> however, it may be useful to provide cocom info for the whole repository for each commit (or every X commits)
+[16:18] <valcos> what do you think ?
+[16:19] <inishchith> the data produced by CoCOm as of now is [ ccn, loc , comments , tokens , num_funs,  avg_ccn, avg_loc, avg_tokens, ]
+[16:20] <aswanipranjal> Yeah, we could plot the changes in number of lines changed (and more) in every 5 commits (the number of commits can be configurable)
+[16:20] <inishchith> We could use ccn, loc, tokens & num_funs to show these changes in a commit. (if that's helpful?)
+[16:20] <inishchith> Yes. @aswanipranjal. That seems to be a better idea!
+[16:21] <inishchith> what do you think @valcos?
+[16:21] <valcos> It's a good idea indeed!
+[16:22] <aswanipranjal> Number of functions, comments and tokens can also be plotted. Will that be useful @valcos?
+[16:23] <valcos> I guess comments can be useful, and maybe functions. Not really sure about the tokens
+[16:24] <valcos> Maybe we could aggregate the data based on time
+[16:24] <valcos> for instance, every month or week
+[16:24] <valcos> instead of relying on every X commits
+[16:25] <aswanipranjal> Yeah, that would give a better analysis over time
+[16:25] <valcos> this shouldn't be difficult to do it in the enrichment phase
+[16:25] <valcos> what do you think @inishchith ?
+[16:26] <inishchith> @valcos for visualizing changes we would require previous data to compare with and a mapping with every file right?
+[16:26] <inishchith> as data produced is only in context of files affected in a commit.
+[16:26] <inishchith> > valcos: this shouldn't be difficult to do it in the enrichment phase.
+[16:26] <inishchith> Yes. could be done!
+[16:27] == Polaris000 [~Polaris00@106.220.19.70] has joined #grimoirelab
+[16:27] <valcos> >@valcos for visualizing changes we would require previous ...?
+[16:28] <valcos> I guess Kibana can help on this
+[16:29] <valcos> I have to check, but I guess we can aggregate by time and then create buckets to sum up the number of comments, loc and so on
+[16:30] <valcos> the best thing to do is probably to open up this conversation on github
+[16:31] <valcos> and ping Jesus and maybe the other people involved in the metric definitions
+[16:31] <inishchith> @valcos sure. I've opened a ticket yesterday over here (https://github.com/inishchith/gsoc-graal/issues/6).
+[16:31] <inishchith> I've update the description in context of currently proposed idea and then we can ping jgbarah and other people involved.
+[16:32] <inishchith> what do you think?
+[16:32] <valcos> great! thanks
+[16:32] <valcos> is it ok for you @aswanipranjal ?
+[16:32] <inishchith> *i'll update
+[16:33] <aswanipranjal> Yes, it works Valerio
+[16:33] <aswanipranjal> We can discuss the details in the issue itself
+[16:33] <valcos> yes!
+[16:34] <valcos> for the upcoming week, we could focus on providing some concrete visualizations
+[16:34] <valcos> based on the discussion in the issue
+[16:34] <valcos> what do you think @inishchith ?
+[16:34] <inishchith> Sounds great, valcos!.
+[16:35] <valcos> thanks!
+[16:35] <valcos> OK, something else to discuss @aswanipranjal @inishchith ?
+[16:35] <inishchith> Also, ( i've mentioned this before i think ). I feel we could first focus on Integrating CoCom backend completely into ELK along with visualization and supporting metrics.
+[16:36] == Polaris000 [~Polaris00@106.220.19.70] has quit [Ping timeout: 246 seconds]
+[16:36] <inishchith> and then go ahead to integrate others (one by one). what do you think @valcos @aswanipranjal?
+[16:37] == Polaris000 [~Polaris00@124.123.75.129] has joined #grimoirelab
+[16:37] <aswanipranjal> This could work Nishchith, this way we will have complete implementations
+[16:38] <aswanipranjal> And after the first backend, the others can follow the same flow as the first
+[16:38] <inishchith> Yes. @aswanipranjal, that was exactly the thought :)
+[16:39] <inishchith> Yes!. It would become easier and after going back, we could make improvements accordingly (if any)
+[16:39] <aswanipranjal> Correct
+[16:40] <inishchith> BTW. Hi Polaris000 :)
+[16:40] <Polaris000> Hi all, did n't want to interrupt
+[16:40] == jgbarah [~jgb@193.147.77.6] has joined #grimoirelab
+[16:40] <Polaris000> Hi jgbarah!
+[16:40] <aswanipranjal> Hey Polaris000, it's okay!
+[16:41] <inishchith> Hi jgbarah!
+[16:41] <Polaris000> Thanks aswanipranjal
+[16:41] <aswanipranjal> Hey jgbarah!
+[16:41] <jgbarah> Hi all!
+[16:42] <jgbarah> I'm sorry, today I have a busy day, with some unexpected meetings, but I'll try to stay aware of our stuff here, and participate in it
+[16:42] <Polaris000> No problem @jgbarah!
+[16:43] <inishchith> No worries jgbarah!.
+[16:43] <aswanipranjal> @valcos, should we finish the meeting with Nishchith?
+[16:43] <inishchith> valcos: what do you think of above proposed idea?
+[16:46] <jgbarah> Polaris000: while valcos answers, if aswanipranjal agrees, we can start our meeting
+[16:46] <aswanipranjal> sure @jgbarah
+[16:46] <Polaris000> Fine by me
+[16:47] <jgbarah> Great!
+[16:47] <Polaris000> Did you all get the document I sent?
+[16:49] <aswanipranjal> @Polaris000 were you able to write a blogpost for this week's tasks?
+[16:49] <Polaris000> I wrote a document and sent it to all of you
+[16:49] <Polaris000> I will later incorporate it in today's post
+[16:49] <aswanipranjal> Okay, the HTML document?
+[16:49] <jgbarah> I'm looking through it right now
+[16:49] <Polaris000> Yeah
+[16:50] <jgbarah> Just a second...
+[16:51] <jgbarah> OK, thanks for the summary, Polaris000.
+[16:51] <jgbarah> I basically agree with it.
+[16:52] <valcos> sorry @inishchith @aswanipranjal
+[16:52] <jgbarah> I think we're almost done with the root class for computing metrics with dataframes.
+[16:52] <jgbarah> I think the first thing would be to finish the implementation of the first metric using this class (well, a child of it)
+[16:53] <aswanipranjal> I agree with Jesus
+[16:53] <jgbarah> Maybe it is close to that with the code you may have written today, which I still couldn't review
+[16:53] <Polaris000> It is updated with the patch I sent today
+[16:53] <jgbarah> So, in short, let's focus on that first metric, if it would need further work after today
+[16:53] <Polaris000> ok
+[16:54] <inishchith> sorry to interrupt . valcos: did you see my message (above). I think we stopped there!
+[16:54] <jgbarah> The other short-term focus should be the hierarchy of classes with plain Python.
+[16:55] <jgbarah> I see in your summary that you feel there is not enough info for you to work on this, am I right Polaris000?
+[16:55] <Polaris000> A little, the instructions and ideas were a bit vague
+[16:56] <Polaris000> The main problem was probably the amount of time it took
+[16:58] <Polaris000> Currently, the heirarchy is like so: Root -> Commit -> Metric class
+[16:58] <jgbarah> Yes,
+[16:58] <valcos> yes @inishchith I agree with your proposal
+[16:58] <jgbarah> but I'm still not sure we have enought knowledge to write Commit
+[16:58] == valcos [~valcos@pct-empresas-136.uc3m.es] has quit [Quit: Leaving]
+[16:58] == valcos [~valcos@pct-empresas-136.uc3m.es] has joined #grimoirelab
+[16:59] <jgbarah> I'm sure we'll find reusable code, but still I'm not sure the best approach for that
+[16:59] <jgbarah> However, if you prefer to work that way, that's fine with me
+[16:59] <inishchith> @valcos @jgbarah @aswanipranjal i'll share the meeting log with you now
+[16:59] <jgbarah> However, try to keep each class minimal
+[16:59] <aswanipranjal> okay, thanks @inishchith!
+[17:00] <jgbarah> (thanks, inishchith!!)
+[17:00] <inishchith> Bye! everyone!
+[17:00] <Polaris000> Bye!
+[17:00] <valcos> Thanks @inishchith, bye

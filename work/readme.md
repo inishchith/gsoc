@@ -8,5 +8,5 @@
 
 ### # Week 2
 
-- **Summary:** [TBA]()
-- **blog-post:** [TBA]()
+- **Summary:** [here](./week2/readme.md)
+- **blog-post:** [[week-2] Evaluating approaches and Initial integration of Graal](https://inishchith.github.io/blog/2019/06/coding-period-1-2.html)
