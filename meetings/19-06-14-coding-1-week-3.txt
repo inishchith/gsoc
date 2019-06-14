@@ -1,0 +1,107 @@
+[15:55] == inishchith [7aa94d0b@gateway/web/freenode/ip.122.169.77.11] has joined #grimoirelab
+[15:56] == jgbarah [~jgb@193.147.77.71] has quit [Quit: Leaving.]
+[16:00] <inishchith> Hi everyone :)
+[16:02] <valcos> Hi @inishchith
+[16:02] <valcos> @jgbara should join the meeting, @aswanipranjal won't attend it
+[16:03] <inishchith> Oh. Okay
+[16:05] <valcos> If you agree @inishchith, we can start
+[16:06] <inishchith> Sure!.
+[16:06] == jgbarah [~jgb@193.147.77.71] has joined #grimoirelab
+[16:06] <valcos> Hi @jgbarah
+[16:06] <inishchith> Hi jgbarah!
+[16:06] <jgbarah> Hi all, sorry for being late!
+[16:07] <valcos> no worries, we were just about to start
+[16:07] <inishchith> Yeah :)
+[16:07] <valcos> @inishchith, could you summarize the work done and the issues found ? :)
+[16:07] <inishchith> Yes. sure!
+[16:08] <inishchith> My this week's task was to work on some visualizations related to analysis data produced by CoCom Backend.
+[16:09] <inishchith> Last week we had discussed to start with analysis(visualization) of changes over a period of time(configurable) for attributes such as ccn (code complexity), loc (lines of code), num_funs (number of functions), tokens (number of tokens).
+[16:11] <inishchith> @valcos: at the start of the week had pushed some reference code to get started with the enrich index and we were just improving the structure of it to make it easier to provide visualization with the data.
+[16:12] <inishchith> The idea discussed was clear, but I couldn’t find a way to implement the idea for (variable number of) files available after a point in time. So i had proposed an idea of repository level analysis
+[16:12] <inishchith> and evaluated the performance with some large repositories(https://github.com/chaoss/grimoirelab-graal/issues/36).
+[16:13] <inishchith> This made it easy to visualize the attribute. Some examples can be found here ( https://github.com/inishchith/gsoc-graal/issues/6 ).
+[16:14] <inishchith> Also i'd worked on a fix for deleted files and their results which can be found here ( https://github.com/chaoss/grimoirelab-graal/pull/37 )
+[16:15] <valcos> Thank you @inishchith
+[16:15] <inishchith> valcos: and I were just about to discuss the final thought on if we're going ahead with the repository level analysis way or the file level. In case of repository level analysis, we miss out the file level data.
+[16:15] <inishchith> So a new structure is to be proposed.
+[16:15] <inishchith> Thanks valcos. That's it
+[16:16] <valcos> the repository-level analysis is indeed a good start
+[16:16] <valcos> the limitation is that we won't be able to know information for each file. For instance it could be interested to know the most complex files
+[16:16] <inishchith> @jgbarah @valcos: Today, i had shared shared a draft blogpost, did you check it ( https://inishchith.github.io/blog/2019/06/coding-period-1-3.html )
+[16:16] <inishchith> Thanks valcos :)
+[16:17] <inishchith> Yes. i agree with that.
+[16:18] <valcos> the idea could be to investigate a bit more the kibana timelion
+[16:18] <valcos> and also to think about a different structure for the enriched index (to simplify the queries to visualize the data)
+[16:19] <valcos> with @inishchith we drafted one
+[16:19] <valcos> file-1
+[16:19] <valcos>    commit-1 (date, ccn, ..)
+[16:19] <valcos>    commit-2 (date, cnn, ...)
+[16:19] <valcos> file-2
+[16:19] <valcos>    commit-1 (date, ccn, ...)
+[16:19] <valcos>    commit-3 (date, ccn, ...)
+[16:19] <inishchith> Yes. I think a new structure ( the one you've proposed ) should make it easier to visualize.
+[16:20] <valcos> so every item in the index will be a file, and it will include the commits that modified it
+[16:20] <valcos> what do you think @jgbarah ?
+[16:21] <valcos> while @jgbarah answers, @inishchith we can discuss the steps for next week
+[16:21] <valcos> what do you think ?
+[16:22] <inishchith> Sure!
+[16:23] <inishchith> We can start incorporating the new structure and then we can have a better idea of visualization and propose some.
+[16:24] <jgbarah> Sorry, valcos, I was haing some issues here
+[16:24] <valcos> no worries @jgbarah
+[16:24] <jgbarah> I see that you propose a structure by file, but won't it be more like the structure is by (file, commit)?
+[16:25] <jgbarah> I mean, for each (file, commit), to have an item in the index
+[16:26] <valcos> each item in the new enriched index will be a file, and inside it there will be a list of commits that affected that file
+[16:27] <valcos> maybe in this way, the operation to know the last value of a given cocom attribute will be easier
+[16:28] <jgbarah> The problem with that is that the index is not flat, which makes it more difficult to query,
+[16:28] <jgbarah> and I'm not sure kibana can cope with that...
+[16:28] <jgbarah> This said, we can always test this data structure that you propose, and see how it works in practice,
+[16:29] <valcos> ok, sure
+[16:29] <jgbarah> and if it doesn't work, revert to other strcutures
+[16:29] <inishchith> Yes!
+[16:29] <valcos> @jgbarah do you have an idea about a possible structure ?
+[16:30] <jgbarah> Quite similar to yours, but having at item for each pair (file, commit)
+[16:30] <jgbarah> That is, folloiwing your terminology:
+[16:30] <jgbarah> file-1, commit-1, date, ccn, ....
+[16:31] <jgbarah> file-2, commit-1, date, ccn, ....
+[16:31] <jgbarah> and so on
+[16:31] <jgbarah> Then, you can group by file and get the earliest date, for example
+[16:31] <valcos> ok, thanks @jgbarah
+[16:31] <valcos> another question this time for both @inishchith and @jgbarah :)
+[16:32] <valcos> do you think that the output of graal could be changed, now it produces a commit that contains file analysis
+[16:32] <valcos> maybe the output could be already something like: file-1, commit-1, date, ccn, ....
+[16:33] <valcos> file-2, commit-1, date, ccn, ....
+[16:33] <jgbarah> valcos, maybe that doesn't matter, as with Perceval
+[16:33] <jgbarah> Whichever the structure that graal produces, it can be later massaged while enriching
+[16:34] <jgbarah> Because of the way it is computet, I see it won't be difficult to already produce a flat structure like that
+[16:34] == Polaris000 [~Polaris00@124.123.75.129] has joined #grimoirelab
+[16:34] <valcos> ok perfect
+[16:34] <jgbarah> I would say that could be useful for other reasons (such as using directly the data produced by Graal)
+[16:34] <jgbarah> but at some point in the past, I remember considering that having
+[16:35] <jgbarah> specific dictionaires per analysis (tool) cold be convenient,
+[16:35] <jgbarah> which already prevents having a flat analysis...
+[16:35] <jgbarah> (a flat index, I mean)
+[16:36] <valcos> ok thanks @jgbarah
+[16:36] <Polaris000> Hi all!
+[16:36] <valcos> @inishchith any thoughts on this ?
+[16:37] <inishchith> I think the current output structure of Graal looks okay. We can make the proposed structural changes for enriched  index ( as you proposed earlier )
+[16:37] <valcos> Hi @Polaris000
+[16:37] <Polaris000> hi
+[16:37] <inishchith> Also we can have the repository-level analysis as a add-on option. if you agree.
+[16:37] <jgbarah> Hi, Polaris000!
+[16:37] <inishchith> Hi, Polaris000 :)
+[16:37] <valcos> sure @inishchith
+[16:38] <valcos> @jgbarah @inishchith do you have any questions ? Is the plan for next week clear ?
+[16:39] <inishchith> Yes. Thanks. I'll create the corresponding issues then we can proceed from there.
+[16:39] <jgbarah> I'm well, thanks
+[16:39] <jgbarah> (I'm good, I meant ;-) )
+[16:39] <valcos> eheh perfect! thank you @inishchith @jgbarah
+[16:40] <jgbarah> Great!
+[16:40] <valcos> @jgbarah if you agree, we can start with the meeting with @Polaris000
+[16:40] <jgbarah> Yes, please!
+[16:40] <inishchith> Great!
+[16:41] <valcos> thank you @inishchith
+[16:41] <valcos> @Polaris if you are OK with it, we can start
+[16:41] <inishchith> I'll share the meeting log with you guys!. Bye :)
+[16:41] <jgbarah> Polaris000: let's start then
+[16:41] <Polaris000> Bye inishchith, Did you all get my summary for this week?
+[16:42] <valcos> bye @inishchith! yes @Polaris000, I got it

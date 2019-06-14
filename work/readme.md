@@ -10,3 +10,8 @@
 
 - **Summary:** [here](./week2/readme.md)
 - **blog-post:** [[week-2] Evaluating approaches and Initial integration of Graal](https://inishchith.github.io/blog/2019/06/coding-period-1-2.html)
+
+### # Week 3
+
+- **Summary:** [here](./week3/readme.md)
+- **blog-post:** [[week-3] Ideate Visualize Repeat](https://inishchith.github.io/blog/2019/06/coding-period-1-3.html)

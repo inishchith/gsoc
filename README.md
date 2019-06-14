@@ -41,12 +41,16 @@ Pull requests created:
 1. [chaoss/grimoirelab-graal#29](https://github.com/chaoss/grimoirelab-graal/pull/29): [colic] Add support of scancode_cli to colic backend **`/cp1`**
 2. [chaoss/grimoirelab-graal#32](https://github.com/chaoss/grimoirelab-graal/pull/32): [graal] Derive `git_path` from `uri` **`/cp1`**
 3. [chaoss/grimoirelab-graal#34](https://github.com/chaoss/grimoirelab-graal/pull/34): [logger] Switch `info` logger level to `debug` **`/cp1`**
+4. [chaoss/grimoirelab-graal#37)](https://github.com/chaoss/grimoirelab-graal/pull/37): [analyzer] Fix results for deleted files for CoCom backend **`/cp1`**
+5. [chaoss/grimoirelab-graal#38](https://github.com/chaoss/grimoirelab-graal/pull/38): [cocom] Add repository level analysis option for CoCom backend **`/cp1`**
 
 
 Issues opened:
 1. [chaoss/grimoirelab-graal#18](https://github.com/chaoss/grimoirelab-graal/issues/18): [discussion] Improvements in existing analyzers and additions **`/ap`**
 2. [chaoss/grimoirelab-graal#27](https://github.com/chaoss/grimoirelab-graal/issues/27): [colic] Add scancode_cli option to CoLic Backend **`/cp1`**
 3. [chaoss/grimoirelab-graal#33](https://github.com/chaoss/grimoirelab-graal/issues/33): [graal] Checkout log an issue in case of large repositories **`/cp1`**
+4. [chaoss/grimoirelab-graal#35](https://github.com/chaoss/grimoirelab-graal/issues/35): [analyzer] Fix results for deleted files **`/cp1`**
+5. [chaoss/grimoirelab-graal#36](https://github.com/chaoss/grimoirelab-graal/issues/36): [cocom] Evaluating results with repository level analysis **`/cp1`**
 
 **#** **Repository: grimoirelab-tutorial**
 
@@ -85,6 +89,7 @@ Issues opened:
 
 + Week #1: [Summary](./work/week1) | Blog Post: [[week-1] Learning how micro-mordred works..](https://inishchith.github.io/blog/2019/06/coding-period-1-1.html)
 + Week #2: [Summary](./work/week2) | Blog Post: [[week-2] Evaluating approaches and Initial integration of Graal](https://inishchith.github.io/blog/2019/06/coding-period-1-2.html)
++ Week #3: [Summary](./work/week3) | Blog Post: [[week-3] Ideate Visualize Repeat](https://inishchith.github.io/blog/2019/06/coding-period-1-3.html)
 
 <br>
 
