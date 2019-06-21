@@ -1,0 +1,101 @@
+[15:56] == inishchith [7aa94d0b@gateway/web/freenode/ip.122.169.77.11] has joined #grimoirelab
+[15:58] <inishchith> Hi! @valcos @aswanipranjal :)
+[15:58] <valcos> hi @aswanipranjal @inishchith
+[15:58] <valcos> how are you doing?
+[15:58] <inishchith> I'm good. How are you?
+[15:58] <valcos> Fine, thanks!
+[15:58] <aswanipranjal> hey @inishchith @valcos!
+[15:59] <inishchith> I had shared the summary earlier today. did you read it?
+[15:59] <valcos> yes, thanks!
+[16:00] <valcos> @jgbarah won't join the meeting today, so if you all agree we can start
+[16:00] <aswanipranjal> yes, please
+[16:00] <inishchith> Sure!
+[16:00] <valcos> OK, great!
+[16:01] <valcos> @inishchith, can you summarize the work done this week and the issues found? thanks
+[16:01] <inishchith> Sure.
+[16:02] <inishchith> I had earlier worked on a repository-level analysis implementation which had issues ( incremental fetches wouldn't work ). So i had made some refinements to use lizard which resolves that issue.
+[16:03] <inishchith> With the help of above implementation i could produce metrics such as Overall LOC, CCN, Comments and A data table of most complex files in a given software repository
+[16:04] <inishchith> Last time, we had thought to alter the structure of enrich index, but it seems like after the refinements after the last meeting clubbed with the above implementation worked just as fine
+[16:06] <inishchith> I couldn't complete the TimeLion task (as addressed in the summary) as the concept of bucketing is the core of our implementation and i couldn't find enough references to create a visualization
+[16:06] <inishchith> I feel if we could make refinements to the current enrich index ( pass some commit information along Graal data ) we can show evolution metrics too. Which needs to be discussed in this meeting
+[16:08] <valcos> OK thank you @inishchith, something to comment about issues/blockers found ?
+[16:08] <inishchith> Anything that's unclear @aswanipranjal and @valcos?
+[16:08] <valcos> not from my side, thanks
+[16:09] <valcos> which refinements would like to include in the enriched index, @inishchith ?
+[16:09] <inishchith> Only blocker for this week was, i spent my time in the weekend to go through TimeLion examples and see if i could get that working for our use case and data. But as i mentioned above
+[16:09] <inishchith> we need to pass commit information and make some refinements.
+[16:10] <aswanipranjal> > i couldn't find enough references to create a visualization
+[16:10] <aswanipranjal> can we help you with this @inishchith?
+[16:10] <inishchith> aswanipranjal, i'll try and explain the problem a bit more clearly. let me know if you can think of a solution.
+[16:11] <aswanipranjal> yes, please go ahead
+[16:11] <valcos> @aswanipranjal @inishchith maybe we can talk about this in a specific issue on GitHub
+[16:11] <valcos> what do you think ?
+[16:12] <aswanipranjal> sure, that works as well!
+[16:12] <inishchith> Agree @valcos. I'll share some mocks. That would be better i feel
+[16:12] <valcos> great!
+[16:12] <inishchith> after the meeting
+[16:12] <valcos> thanks!
+[16:13] <aswanipranjal> > which refinements would like to include in the enriched index, @inishchith ?
+[16:14] <inishchith> Analysis data (repository-level) as of now produces results for every file and we're storing each data as a separate item in enrich index.
+[16:14] <inishchith> so the problem here is. in case there are multiple commits in a day . (say 3 commits today) and number of files in a repository are 130.
+[16:15] <inishchith> So, we're storing 3*130 items in enrich index. ( loosing the information about files affected in those commits)
+[16:16] <inishchith> which leads to problem in aggregation/bucketing ( when i last tried )
+[16:16] <inishchith> Was the above description clear? @valcos @aswanipranjal ?
+[16:17] <valcos> yes, if I understand correctly the problem is that we lose the information of which files were modified
+[16:18] <inishchith> We need to re-structure the repository-level data produced. I'm not sure if we have to make changes in enrich index ( we had done some work in this week which looks good to me )
+[16:18] <inishchith> Thanks valcos!
+[16:19] <valcos> beyond the refinement of the enriched index, which are the next steps for next week ?
+[16:20] <valcos> would you like to produce a first dashboard with a set of visualizations or try to apply the same approach to the colic backend ?
+[16:20] <inishchith> So the above problem would be caused for Evolution metrics using CoCom data.  So restructuring should be done in this week, would like to produce dashboard with the CoCom data.
+[16:21] <inishchith> Analyze CoLic data and evaluate approaches in this week.
+[16:21] <valcos> ok thank you @inishchith, what do you think @aswanipranjal ?
+[16:22] <aswanipranjal> Sounds okay @valcos @inishchith. In total 3 tasks for this week then
+[16:23] <aswanipranjal> refine the enriched index
+[16:23] <aswanipranjal> produce dashboards for CoCom data
+[16:23] <aswanipranjal> evaluate and possibly produce dashboards for CoLic data
+[16:23] <valcos> yes, sounds good!
+[16:23] <inishchith> Yes. valcos aswanipranjal as i mentioned above, i'll open a details issue ticket about the problem, for discussion. about the enrich index refinement for Evolution metrics task.
+[16:24] <inishchith> Yes! aswanipranjal
+[16:24] <valcos> great! If you agree we can discuss which kind of visualizations we could include in the cocom dashboard
+[16:24] <aswanipranjal> sure @inishchith!
+[16:24] <inishchith> Yes, Sure @valcos. Currently we have [ Overall LOC, CCN, Comments and A data table of most complex files ]
+[16:25] <valcos> we could some charts to show the evolution of LOC, CCN and comments
+[16:26] <valcos> a table or pie chart to allow the selection of one or more repos (origins)
+[16:27] <inishchith> valcos > we could some charts to show the evolution of LOC, CCN and comments. > Yes. If we could solve the problem by restructuring the data(commit). We can surely get this thing working.
+[16:27] <valcos> OK great
+[16:27] <valcos> maybe we could try to add another visualization/table to show the relation between comments and LOC in files
+[16:28] <valcos> the idea behind this is to show that we can combine cocom attributes together, going beyond the simple metrics returned by cloc and lizard
+[16:28] <inishchith> > aybe we could try to add another visualization/table to show the relation between comments and LOC in files. | Yes. That sounds interesting. @aswanipranjal what do you think?
+[16:29] <aswanipranjal> > maybe we could try to add another visualization/table to show the relation between comments and LOC in files
+[16:29] <aswanipranjal> Are we also going to look into the number of functions as well? Maybe show the relation between Functions and LOC?
+[16:30] <valcos> it could be a nice idea
+[16:31] <inishchith> Yes!. We could have it as well
+[16:31] <aswanipranjal> okay, great!
+[16:31] <valcos> cool! @inishchith could you open an issue
+[16:31] <valcos> summarizing the dashboard to be done and the metrics
+[16:32] <valcos> sorry, the visualizations
+[16:32] <valcos> thank you!
+[16:32] <inishchith> Yes. Sure! I'll do it by the end of the day. Thanks!
+[16:32] <valcos> great!
+[16:32] <aswanipranjal> Thanks @inishchith!
+[16:32] <valcos> something else to discuss @aswanipranjal @inishchith ?
+[16:33] <inishchith> Thanks. Any suggestions related to the work done until now @aswanipranjal @valcos?
+[16:33] <aswanipranjal> Nothing else from my side @valcos
+[16:33] <inishchith> > something else to discuss @aswanipranjal @inishchith ? not from my side. We can discuss rest on the issue ticket. Thanks!
+[16:33] == andre__ [~andre__@wikimedia/aklapper] has quit [Quit: Out.]
+[16:34] <valcos> No, everything is going to the right direction and I'm really curious to see first version of the cocom dashboard
+[16:34] <aswanipranjal> everyhthing looks good @inishchith
+[16:34] <aswanipranjal> > Thanks. Any suggestions related to the work done until now @aswanipranjal @valcos?
+[16:34] <aswanipranjal> same!
+[16:34] <aswanipranjal> sorry
+[16:34] <aswanipranjal> > No, everything is going to the right direction and I'm really curious to see first version of the cocom dashboard
+[16:34] <aswanipranjal> same!
+[16:34] <valcos> thank you @aswanipranjal @inishchith for you time
+[16:35] <inishchith> Thanks @valcos @aswanipranjal :)
+[16:35] <valcos> bye :)
+[16:35] <aswanipranjal> @inishchith, as usual, please produce a log of this meeting
+[16:35] <aswanipranjal> Thanks for your time @inishchith @valcos!
+[16:35] <aswanipranjal> Bye!
+[16:35] == valcos [~valcos@pct-empresas-136.uc3m.es] has quit [Quit: Leaving]
+[16:35] <inishchith> I'll share the meeting log now. Thanks !
+[16:35] <inishchith> Bye!

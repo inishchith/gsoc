@@ -43,6 +43,7 @@ Pull requests created:
 3. [chaoss/grimoirelab-graal#34](https://github.com/chaoss/grimoirelab-graal/pull/34): [logger] Switch `info` logger level to `debug` **`/cp1`**
 4. [chaoss/grimoirelab-graal#37)](https://github.com/chaoss/grimoirelab-graal/pull/37): [analyzer] Fix results for deleted files for CoCom backend **`/cp1`**
 5. [chaoss/grimoirelab-graal#38](https://github.com/chaoss/grimoirelab-graal/pull/38): [cocom] Add repository level analysis option for CoCom backend **`/cp1`**
+6. [chaoss/grimoirelab-graal#39](https://github.com/chaoss/grimoirelab-graal/pull/39): [cocom] Add repository level analysis via lizard **`/cp1`**
 
 
 Issues opened:
@@ -51,6 +52,13 @@ Issues opened:
 3. [chaoss/grimoirelab-graal#33](https://github.com/chaoss/grimoirelab-graal/issues/33): [graal] Checkout log an issue in case of large repositories **`/cp1`**
 4. [chaoss/grimoirelab-graal#35](https://github.com/chaoss/grimoirelab-graal/issues/35): [analyzer] Fix results for deleted files **`/cp1`**
 5. [chaoss/grimoirelab-graal#36](https://github.com/chaoss/grimoirelab-graal/issues/36): [cocom] Evaluating results with repository level analysis **`/cp1`**
+
+
+**#** **Repository: grimoirelab-elk**
+
+Issues opened:
+1. [chaoss/grimoirelab-elk#642](Add option to fetch from selected branches #642): Add option to fetch from selected branches **`/cp1`**
+
 
 **#** **Repository: grimoirelab-tutorial**
 
@@ -90,6 +98,7 @@ Issues opened:
 + Week #1: [Summary](./work/week1) | Blog Post: [[week-1] Learning how micro-mordred works..](https://inishchith.github.io/blog/2019/06/coding-period-1-1.html)
 + Week #2: [Summary](./work/week2) | Blog Post: [[week-2] Evaluating approaches and Initial integration of Graal](https://inishchith.github.io/blog/2019/06/coding-period-1-2.html)
 + Week #3: [Summary](./work/week3) | Blog Post: [[week-3] Ideate Visualize Repeat](https://inishchith.github.io/blog/2019/06/coding-period-1-3.html)
++ Week #4: [Summary](./work/week4) | Blog Post: [[week-4] Structuring data & Evaluating approaches](https://inishchith.github.io/blog/2019/06/coding-period-1-4.html)
 
 <br>
 
