@@ -21,3 +21,8 @@
 
 - **Summary:** [here](./week4/readme.md)
 - **blog-post:** [[week-4] Structuring data & Evaluating approaches](https://inishchith.github.io/blog/2019/06/coding-period-1-4.html)
+
+### # Week 5
+
+- **Summary:** [here](./week5/readme.md)
+- **blog-post:** [[week-5] And.. we have our first dashboard](https://inishchith.github.io/blog/2019/06/coding-period-1-5.html)

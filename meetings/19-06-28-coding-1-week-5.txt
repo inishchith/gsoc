@@ -1,0 +1,103 @@
+<valcos> Hi @inishchith
+<valcos> how are you doing?
+<inishchith> Hi valcos aswanipranjal :)
+<inishchith> I'm good. How are you?
+<aswanipranjal> Hey inishchith valcos jgbarah!
+<jgbarah> Hi all!
+<valcos> I'm fine thanks!
+<inishchith> Hi jgbarah :)
+<inishchith> I had shared the weekly summary earlier today.
+<valcos> great, thanks!
+<valcos> @inishchith could you summarize the work done this week and the issues found (if any)?
+<inishchith> Sure!
+<aswanipranjal> I am sorry but I won't be able to attend this meeting with Nishchith. I have a meeting at work that I need to attend
+<aswanipranjal> Sorry!
+<aswanipranjal> I will update myself with the logs later
+<valcos> ok, no worries @aswanipranjal
+<inishchith> Oh. Okay aswanipranjal
+<inishchith> 1. We got repository-level analysis via lizard(PR) merged after getting reviewed by valcos and making necessary changes regarding commit level information
+<inishchith> 2.  I had opened an issue ticket(https://github.com/inishchith/gsoc-graal/issues/11) for discussion wrt to visualizations. In addition to some metric widgets from last time, I tried adding line graph, Pie Chart, and data tables and prepared the first iteration of the CoCom dashboard which can be found here(http://tiny.cc/ug3x8y).(we'll be discussin
+<inishchith> g more on this today)
+<inishchith> Dashboard link: http://tiny.cc/ug3x8y
+<inishchith> 3. I've kick-started some work on CoLic backend, need some ideas to pick relevant attributes from the data produced by the Graal Backend so that we can make the changes accordingly in Graal.
+<jgbarah> Nice dashboard, inishchith
+<jgbarah> What is "CCN"?
+<inishchith> Thanks jgbarah. There some more work left ( regarding organizing the widgets ). CCN = Code Complexity.
+<valcos> yes! good job @inishchith
+<jgbarah> OK, thanks!
+<inishchith> Yes. We'll re-iterate and make it better :)
+<inishchith> Thanks valcos
+<valcos> if you agree @inishchith, we can start the discussion around the dashboard
+<inishchith> Sure!
+<inishchith> jgbarah if you agree
+<jgbarah> Yes, please
+<valcos> @jgbarah, the goal of this meeting is to discuss the current visualizations, decide which ones to keep/discard/refine
+<valcos> together with @inishchith, we were thinking to have at 1 or 2 vizs about the evolution of some cocom attributes (ccn, comments, LOC)
+<jgbarah> Yes, please go ahead ;-)
+<jgbarah> That would be great
+<inishchith> jgbarah We've been using this issue ticket(https://github.com/inishchith/gsoc-graal/issues/11) to discuss between the meetings. You can check it out later :)
+<inishchith> Agree with you, valcos
+<valcos> then some tables to highlight the most complex files (in terms of LOC or CCN)
+<jgbarah> Right now, due to the limitations in Kibana, i understood that we can only do that at repo level, am I right?
+<valcos> with the latest changes on graal we can go to the file level, but probably @inishchith can tell more about it
+<inishchith> Yes. jgbarah, But we're trying to make it better. (We've added commit level information like files affected)
+<jgbarah> That would be great!!!
+<jgbarah> OK then the index includes file, commit, right?
+<inishchith> Yes.
+<valcos> For every commit, we execute the cocom analyzers over the full repo 
+<valcos> and then mark the files that were affected by the commit being analyzed
+<jgbarah> Good!
+<inishchith> Yet, there's an optimization (which valcos had suggested)  which we've planned to work on in the later phase
+<inishchith> for evaluation and improvements
+<valcos> please @inishchith correct me if I'm wrong or missing something
+<jgbarah> Then, I think you can of course start by tables, with longer files, with more complexity...
+<jgbarah> But I think the most interesting stuff is how things are evolving. For that, you need the latest data for each file at a certain point in time, which I'm not sure you can get in Kibana...
+<inishchith> Sure valcos.
+<valcos> perfect!
+<inishchith> Yes, jgbarah That would be interesting.
+<inishchith> But, Visualizing file-level information can be a bit complex (of what i've tried till now).
+<inishchith> We can work on a solution. I'll try to post some ideas over here (https://github.com/inishchith/gsoc-graal/issues/11)
+<valcos> great!
+<inishchith> Also, jgbarah, If you can later check the dashboard and if any suggestions, feel free to post on the issue thread :)
+<valcos> good idea! we can move the discussion to the ticket
+<valcos> for next week we could finalize the first version of this dashboard and advance on colic data
+<valcos> what do you think @inischith?
+<inishchith> Yes! valcos , i need your thoughts over the attributes that can be considered
+<inishchith> A slice of data produced by CoLic can be found here(https://github.com/inishchith/gsoc-graal/issues/9)
+<inishchith> We need to think what's relevant and in this weekend by task would be to post some ideas on the thread. What do you think valcos jgbarah?
+<valcos> perfect @inischith
+<valcos> there are two main lines
+<valcos> one is to explore the colic backend and see if we can apply the same solution we found for cocom
+<valcos> the other option is to target the optimization of what we have done so far
+<valcos> (try to make the cocom analysis more efficient in terms of storage)
+<inishchith> Agree valcos. Thanks
+<valcos> for a repo of 1000 commits with around 1000, the target index is pretty big
+<valcos> if the repo is larger, we may end up in storage issues
+<valcos> what do you prefer to focus on @inishchith?
+* Polaris000 (~Polaris00@124.123.75.129) has joined
+<inishchith> valcos You're referring to out current implementation of CoCom enricher right?
+<valcos> yes
+<inishchith> I agree with the storage issue part and yes, there's a scope for improvement(as you'd suggested a solution). Do you want me to evaluate the log file solution? I think some of the license metrics defined here(https://github.com/chaoss/metrics/issues/139) wouldn't require repository-level implementation like we did for CoCom backend.
+<valcos> as you prefer, we could have something stable for colic and cocom and then perform another iteration
+<valcos> (which would target scalability issue)
+<valcos> @jgbarah any preferences?
+<valcos> Hi @Polaris000
+<Polaris000> Hi valcos!
+<jgbarah> Hi, Polaris000! We're still in the meeting with inishchith
+<inishchith> Hi Polaris000!
+<Polaris000> Its alright, we can start when you are done
+<Polaris000> Hi!
+<jgbarah> Well, for me both options are ok
+<valcos> thank you @jgbarah, if you all agree we can finish the first iteration over the colic and cocom dashboards
+<inishchith> Yes. valcos.
+<valcos> and in the second iteration we will focus on performance
+<inishchith> Sure. That would be better!
+<valcos> great!
+<valcos> @jgbara @inishchith do you want to comment on something?
+<jgbarah> Nothing in particular. Thanks!
+<inishchith> Nothing from my side too. Thanks :)
+<valcos> perfect! thank you for your time
+<jgbarah> Thanks to you all!
+<jgbarah> Polaris000: we can start, if you all want
+<Polaris000> Yes jgbarah!
+<inishchith> Thanks. Is there a way to get the log from this new UI?

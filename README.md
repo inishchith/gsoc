@@ -57,7 +57,7 @@ Issues opened:
 **#** **Repository: grimoirelab-elk**
 
 Issues opened:
-1. [chaoss/grimoirelab-elk#642](Add option to fetch from selected branches #642): Add option to fetch from selected branches **`/cp1`**
+1. [chaoss/grimoirelab-elk#642](https://github.com/chaoss/grimoirelab-elk/issues/642): Add option to fetch from selected branches **`/cp1`**
 
 
 **#** **Repository: grimoirelab-tutorial**
@@ -99,6 +99,7 @@ Issues opened:
 + Week #2: [Summary](./work/week2) | Blog Post: [[week-2] Evaluating approaches and Initial integration of Graal](https://inishchith.github.io/blog/2019/06/coding-period-1-2.html)
 + Week #3: [Summary](./work/week3) | Blog Post: [[week-3] Ideate Visualize Repeat](https://inishchith.github.io/blog/2019/06/coding-period-1-3.html)
 + Week #4: [Summary](./work/week4) | Blog Post: [[week-4] Structuring data & Evaluating approaches](https://inishchith.github.io/blog/2019/06/coding-period-1-4.html)
++ Week #5: [Summary](./work/week5) | Blog Post: [[week-5] And.. we have our first dashboard](https://inishchith.github.io/blog/2019/06/coding-period-1-5.html)
 
 <br>
 
