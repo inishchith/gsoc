@@ -1,0 +1,121 @@
+[15:58:37] 	inishchith (~textual@110.227.194.196) joined the channel
+[15:58:38] Mode is +cnt
+[15:59:11]  <inishchith>	Hi @valcos @jgbarah @aswanipranjal 
+[15:59:20]  <jgbarah>	Hi all!
+[15:59:48]  <aswanipranjal>	hey all!
+[16:00:51]  <valcos>	Hi all!
+[16:01:16]  <valcos>	How are you doing?
+[16:01:32]  <inishchith>	I'm good :)
+[16:02:25]  <valcos>	I hope also @aswanipranjal and @jgbarah are fine :)
+[16:02:41]  <aswanipranjal>	I am fine @valcos, thanks for asking!
+[16:02:58]  <valcos>	@inishchith could you briefly summarize the work done this week and the issues/blockers found, thanks?
+[16:03:23]  <inishchith>	Sure. Also i had shared the summary earlier today, did you guys receive it?
+[16:03:30]  <jgbarah>	Yes, fine, thanks! ;-)
+[16:03:40]  <valcos>	yes, thanks
+[16:04:10]  <jgbarah>	Yes, I received it, thanks
+[16:04:36]  <inishchith>	Okay great. I'll start
+[16:05:20]  <inishchith>	We had started with making improvements in the CoCom dashboard as @valcos had suggested some. (https://github.com/inishchith/gsoc-graal/issues/11#issuecomment-507321396)
+[16:06:33]  <inishchith>	We had to make some changes to the CoCom enricher for module-level results. And collectively with the help of the Selector we had improved the Dashboard ( now we can filter by file, module, metric-range)
+[16:08:07]  <inishchith>	I had also started some work on CoLic data, so making the initial version of CoLIc enricher was easy and quick and i could produce some viz with the help of it, which can be found here (https://github.com/inishchith/gsoc-graal/issues/14#issuecomment-508492516)
+[16:09:10]  <valcos>	thanks @inishchith, something else to comment?
+[16:09:17]  <inishchith>	As of now we've only used a few fields from the data produced by CoLic backend (scan_cli), after the finalized version of CoCom dashboard we can focus on more fields and add more viz accordingly
+[16:09:32]  <inishchith>	dashboards can be found here (https://grimoirelab-incubator.biterg.io/app/kibana#/dashboards)
+[16:10:13]  <inishchith>	That's it @valcos. I've been looking for improvements in viz and correctness hereafter.
+[16:10:25]  <valcos>	thank you @inishchith for the updates
+[16:10:41]  <valcos>	@jgbarah @aswanipranjal please access the URL
+[16:11:14]  <valcos>	we can discuss the two dashboards (we can start with the one about cocom)
+[16:11:27]  <jgbarah>	Thanks, @valcos, I'm already checking it
+[16:11:49]  <valcos>	great! any feedback/suggestion is welcomed
+[16:12:16]  <valcos>	IMHO the cocom dashboard improved a lot, but we may need some minor refinements)
+[16:12:52]  <jgbarah>	Minor suggestion: save the dashboards with a more reasonable time period (it is 10 min. now)
+[16:13:06]  <inishchith>	Yes. The module-level idea and Selector has been a good addition
+[16:13:47]  <valcos>	the tables may not be needed (maybe only the one about repositories could be kept), since the same information can be obtained with the selector and pie and line charts
+[16:14:11]  <inishchith>	@jgbarah Sorry, i didn't get you.
+[16:14:37]  <valcos>	good idea @jgbarah
+[16:14:51]  <jgbarah>	When you load the dasbuard for the first time, on the top right you have 10 min. as the fime frame
+[16:15:01]  <jgbarah>	You go there, and change it to see something, right?
+[16:15:14]  <inishchith>	Yes. 
+[16:15:27]  <jgbarah>	You can also save the dashboard with the time selection you have in any given moment
+[16:15:43]  <jgbarah>	So, select eg 2 years, and save the dashboard with that option clicked. That's it.
+[16:15:55]  <inishchith>	Oh. Okay. Thanks. Will make the change
+[16:16:47]  <inishchith>	@valcos agree with you (about removing some tables). I had kept it as it was an early addition.
+[16:17:03]  <inishchith>	We can remove it.
+[16:17:11]  <valcos>	maybe we could add two more pie charts about Top 10 longest files and Top 10 commented files
+[16:17:22]  <jgbarah>	For the title of the charts, instead of eg "Lines of code per day", I think better say "Evolution of total number of lines of code", or something like that
+[16:17:25]  <inishchith>	Except for the Repository-Overview one
+[16:17:38]  <jgbarah>	Otherwise, it seems it is the number of lines contributed each day, which is not the case
+[16:18:36]  <inishchith>	@valcos. That would have a similar configuration as the one of Top-10 Complex files. And yes, i can add it :)
+[16:18:48]  <valcos>	great! thanks @inishchith
+[16:18:58]  <valcos>	please @jgbara refresh the dashboard
+[16:19:26]  <aswanipranjal>	> So, select eg 2 years, and save the dashboard with that option clicked. That's it.
+[16:19:26]  <aswanipranjal>	can we set it to the earliest timeperiod seen in the repositories being analysed?
+[16:19:49]  <jgbarah>	Great, thanks!
+[16:20:08]  <valcos>	good question @aswanipranjal! I'm not sure it's possible
+[16:20:10]  <jgbarah>	aswanipranjal: you need to set an specific  timeframe :-(
+[16:20:19]  <aswanipranjal>	oh, okay
+[16:20:42]  <inishchith>	@valcos. Thanks for the quick refinements in labels and positioning of widgets :)
+[16:21:03]  <valcos>	you're welcome @jgbarah @inishchith
+[16:21:12]  <jgbarah>	Overall, I like this dashboard
+[16:21:31]  <valcos>	great @jgbara! a question for you all, should we merge some line charts together?
+[16:21:58]  <jgbarah>	I m not sure, because of the different scales...
+[16:23:16]  <valcos>	LOC and comments should have the same scale
+[16:23:33]  <jgbarah>	Well, that could be it, yes
+[16:23:48]  <inishchith>	@valcos adding to @jgbarah said. in case there are more number of projects. the first look at the dashboard. would look a bit messy. 
+[16:24:04]  <jgbarah>	But with several repos, maybe that could be a bit confusing?
+[16:24:25]  <inishchith>	Yeah.
+[16:24:26]  <jgbarah>	inishchith: exactly ;-
+[16:24:57]  <valcos>	yep, you are right
+[16:25:21]  <jgbarah>	Just a thought: maybe you could add some charts with a single line for all the repos together, showing lines of code and comments (just two lines in the chart)
+[16:25:43]  <valcos>	it could work if we don't group by repo?
+[16:25:52]  <valcos>	this will be delegated to the selector
+[16:25:55]  <valcos>	WDYT?
+[16:25:55]  <jgbarah>	That could be useful. Maybe you could make room fro complexity too, but only if you find out haw to have a separate scale (I m not sure that can be done)
+[16:26:15]  <jgbarah>	Exactly tghat, @valcos ;-)
+[16:26:25]  <jgbarah>	But I would keep the current charts as well.
+[16:26:28]  <inishchith>	@valcos. @jgbarah. Yes. Similar ideas. We can try that 
+[16:27:05]  <valcos>	perfect! we can summarize the next steps for the cocom dashboard
+[16:27:11]  <jgbarah>	Another one that could be intereting is an XY plot showing, for each file, two of the metrics (for the last release of the file analyzed).
+[16:27:28]  <jgbarah>	I'm not sure if that can be done, but would be very helpful to detect outliers
+[16:28:06]  <valcos>	WDYT @inishchith, can we give it a try? the idea proposed by @jgbarah seems interesting to explore
+[16:28:35]  <inishchith>	@valcos @jgbarah. That can be done. I'll try that and share the results.
+[16:28:48]  <jgbarah>	Great!
+[16:29:02]  <inishchith>	Then the specific files can be picked via the Selector
+[16:29:43]  <jgbarah>	If you find that one doable, another one more difficult: again XY, showing the mean (and/or median) of two metrics for all the files, for each point in time
+[16:30:17]  <jgbarah>	If possible, with a line from a point to the next one (in chronological order) (I know the latter is likely not possible, but the formar may be doable
+[16:31:00]  <valcos>	should we move to the other dashboard?
+[16:31:35]  <inishchith>	@jgbarah. I'll try out the idea and share the results here (https://github.com/inishchith/gsoc-graal/issues/11)
+[16:31:41]  <jgbarah>	Yes, please
+[16:31:42]  <inishchith>	Sure @valcos
+[16:31:49]  <jgbarah>	OK, inishchith
+[16:32:22]  <valcos>	we could try follow the similar approach for cocom, so less tables and more visualizations
+[16:32:28]  <jgbarah>	First comment: the "Copyright (c) 2015-2019 Bitergia" categories seem weird...
+[16:32:38]  <jgbarah>	Is that a failure of the underlying tool?
+[16:33:17]  <inishchith>	@valcos. did you mean for CoLic?. Yes
+[16:33:37]  <valcos>	yes for Colic, sorry
+[16:33:56]  <valcos>	it's possible that's a failure of the underlying tool, we should check it out
+[16:34:30]  <inishchith>	@jgbarah. Yes. you can have a look at the CoLic data here(https://github.com/inishchith/gsoc-graal/issues/9#issuecomment-505761692)
+[16:34:58]  <valcos>	a line chart to show the evolution of licenses/copyrighted files against the ones without such an info could be useful?
+[16:35:01]  <inishchith>	Under `code_license_scancode_cli` category
+[16:35:53]  <jgbarah>	valcos yes
+[16:36:28]  <jgbarah>	inishchith: definitely we should check out if we can avoid that problem, otherwise the data is unusable :-(
+[16:37:10]  <inishchith>	Sure. This was just an initial exploration. I'll see if it can be improved in coming days. Thanks!
+[16:37:22]  <jgbarah>	Evolution over time of the number of files for each license, including those with no license, would also be awsome
+[16:38:16]  <inishchith>	As of now, we just have a metric(latest) showing number of licensed and non-licensed file. This addition would be great if possible to implement
+[16:39:05]  <valcos>	perfect!
+[16:40:01]  <valcos>	next week we could focus on refining the cocom dashboard, finalize the colic one and start exploring solutions to improve the performance
+[16:40:20]  <valcos>	WDYT @jgbara, @aswanipranjal, @inishchith?
+[16:41:04]  <jgbarah>	Yes, good idea
+[16:41:11]  <aswanipranjal>	sounds good
+[16:41:11]  <inishchith>	@valcos. Sure. Yes. Thats an important one. Maybe that would even trigger some changes. 
+[16:42:41]  <valcos>	ok great!
+[16:43:08]  <valcos>	something else to comment @jgbara @aswanipranjal @inishchith?
+[16:43:23]  <inishchith>	Not from my side. Thanks ;)
+[16:44:00]  <aswanipranjal>	Nothing from my side
+[16:46:13]  <valcos>	thank you for your time  @jgbarah @aswanipranjal @inishchith
+[16:46:28]  <aswanipranjal>	Thanks @inishchith!
+[16:46:36]  <jgbarah>	Thanks!
+[16:46:36]  <inishchith>	Thanks @valcos @aswaniprajnal @jgbarah.
+[16:46:40]  <inishchith>	Bye!
+[16:46:47]  <inishchith>	I'll share the meeting logs now
+[16:46:55]  <valcos>	great, thanks @inishchith!
+[16:46:55]  <jgbarah>	Bye, inishchith

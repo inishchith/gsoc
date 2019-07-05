@@ -44,6 +44,8 @@ Pull requests created:
 4. [chaoss/grimoirelab-graal#37)](https://github.com/chaoss/grimoirelab-graal/pull/37): [analyzer] Fix results for deleted files for CoCom backend **`/cp1`**
 5. [chaoss/grimoirelab-graal#38](https://github.com/chaoss/grimoirelab-graal/pull/38): [cocom] Add repository level analysis option for CoCom backend **`/cp1`**
 6. [chaoss/grimoirelab-graal#39](https://github.com/chaoss/grimoirelab-graal/pull/39): [cocom] Add repository level analysis via lizard **`/cp1`**
+7. [chaoss/grimoirelab-graal#40](https://github.com/chaoss/grimoirelab-graal/pull/40): [docs] Update documentation and links to requirements **`/cp2`**
+8. [chaoss/grimoirelab-graal#41](https://github.com/chaoss/grimoirelab-graal/pull/41): [analyzer] Fix scancode_cli results **`/cp2`**
 
 
 Issues opened:
@@ -55,6 +57,12 @@ Issues opened:
 
 
 **#** **Repository: grimoirelab-elk**
+
+Pull requests created:
+1. [chaoss/grimoirelab-elk#650](https://github.com/chaoss/grimoirelab-elk/pull/650): [elk] Add option to fetch from selected branches **`/cp2`**
+2. [chaoss/grimoirelab-elk#651](https://github.com/chaoss/grimoirelab-elk/pull/651): [graal] Add support of Graal's CoCom Backend to ELK **`/cp2`**
+3. [chaoss/grimoirelab-elk#653](https://github.com/chaoss/grimoirelab-elk/pull/653): [graal] Add support of Graal's CoLic Backend to ELK **`/cp2`**
+
 
 Issues opened:
 1. [chaoss/grimoirelab-elk#642](https://github.com/chaoss/grimoirelab-elk/issues/642): Add option to fetch from selected branches **`/cp1`**
@@ -100,6 +108,11 @@ Issues opened:
 + Week #3: [Summary](./work/week3) | Blog Post: [[week-3] Ideate Visualize Repeat](https://inishchith.github.io/blog/2019/06/coding-period-1-3.html)
 + Week #4: [Summary](./work/week4) | Blog Post: [[week-4] Structuring data & Evaluating approaches](https://inishchith.github.io/blog/2019/06/coding-period-1-4.html)
 + Week #5: [Summary](./work/week5) | Blog Post: [[week-5] And.. we have our first dashboard](https://inishchith.github.io/blog/2019/06/coding-period-1-5.html)
+
+### Coding Period 2 - June 28th to July 26th, 2019
+
++ Week #6: [Summary](./work/week6) | Blog Post: [[week-6] Much needed... Pace](https://inishchith.github.io/blog/2019/07/coding-period-2-6.html)
+
 
 <br>
 

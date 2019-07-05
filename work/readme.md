@@ -26,3 +26,8 @@
 
 - **Summary:** [here](./week5/readme.md)
 - **blog-post:** [[week-5] And.. we have our first dashboard](https://inishchith.github.io/blog/2019/06/coding-period-1-5.html)
+
+### # Week 6
+
+- **Summary:** [here](./week6/readme.md)
+- **blog-post:** [[week-6] Much needed... Pace](https://inishchith.github.io/blog/2019/07/coding-period-2-6.html)
