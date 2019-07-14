@@ -35,7 +35,7 @@
 
 ## # Pull Requests & Issues
 
-**#** **Repository: grimoirelab-graal**
+**#** **Repository: grimoirelab-graal** [**`/working-branches`**](https://github.com/inishchith/grimoirelab-graal/branches)
 
 Pull requests created:
 1. [chaoss/grimoirelab-graal#29](https://github.com/chaoss/grimoirelab-graal/pull/29): [colic] Add support of scancode_cli to colic backend **`/cp1`**
@@ -56,7 +56,7 @@ Issues opened:
 5. [chaoss/grimoirelab-graal#36](https://github.com/chaoss/grimoirelab-graal/issues/36): [cocom] Evaluating results with repository level analysis **`/cp1`**
 
 
-**#** **Repository: grimoirelab-elk**
+**#** **Repository: grimoirelab-elk** [**`/working-branches`**](https://github.com/inishchith/grimoirelab-elk/branches)
 
 Pull requests created:
 1. [chaoss/grimoirelab-elk#650](https://github.com/chaoss/grimoirelab-elk/pull/650): [elk] Add option to fetch from selected branches **`/cp2`**
@@ -68,7 +68,7 @@ Issues opened:
 1. [chaoss/grimoirelab-elk#642](https://github.com/chaoss/grimoirelab-elk/issues/642): Add option to fetch from selected branches **`/cp1`**
 
 
-**#** **Repository: grimoirelab-tutorial**
+**#** **Repository: grimoirelab-tutorial** [**`/working-branches`**](https://github.com/inishchith/grimoirelab-tutorial/branches)
 
 Pull requests created:
 1. [chaoss/grimoirelab-tutorial#86](https://github.com/chaoss/grimoirelab-tutorial/pull/86): [graal] Add Graal to the Sidebar **`/cp1`**
@@ -78,7 +78,7 @@ Issues opened:
 1. [chaoss/grimoirelab-tutorial#84](https://github.com/chaoss/grimoirelab-tutorial/issues/84): [components] How to play with Grimoirelab components **`/cp1`**
 
 
-**#** **Repository: metrics**
+**#** **Repository: metrics** **`/working-branches`**
 
 Issues opened:
 1. [chaoss/metrics#139](https://github.com/chaoss/metrics/issues/139): New Metrics: Support of source code related metrics **`/ap`**
@@ -127,9 +127,12 @@ Issues opened:
 ## # Links
 
 + GSoC project [proposal](./notes/gsoc-proposal-inishchith.pdf)
++ Graal: The Quest for Source Code Knowledge [paper](https://www.researchgate.net/publication/326942711_Graal_The_Quest_for_Source_Code_Knowledge)
+
 
 <br>
 
 ### `Footnotes`
 
 + Work done during application period can be found here : [Contributions](./notes/application-period-contributions.md) & [Micro-tasks](https://github.com/inishchith/chaoss-microtasks)
+
