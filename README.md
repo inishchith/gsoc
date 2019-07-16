@@ -112,6 +112,7 @@ Issues opened:
 ### Coding Period 2 - June 28th to July 26th, 2019
 
 + Week #6: [Summary](./work/week6) | Blog Post: [[week-6] Much needed... Pace](https://inishchith.github.io/blog/2019/07/coding-period-2-6.html)
++ Week #7: [Summary](./work/week7) | Blog Post: [[week-7] Scope of improvement](https://inishchith.github.io/blog/2019/07/coding-period-2-7.html)
 
 
 <br>

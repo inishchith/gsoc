@@ -1,0 +1,173 @@
+[15:30:35] 	inishchith (~textual@106.201.64.196) joined the channel
+[15:30:35] Mode is +cnt
+[15:30:58]  <inishchith>	Hi @valcos @aswanipranjal :)
+[15:31:52]  <aswanipranjal>	hey inishchith!
+[15:31:55]  <aswanipranjal>	How are you?
+[15:32:04]  <inishchith>	I'm good. How are you?
+[15:32:19]  <aswanipranjal>	I am fine too, thanks for asking!
+[15:33:17]  <inishchith>	I had shared the week summary(earlier today). did you all get time to go through it?
+[15:34:48]  <aswanipranjal>	yeah, thanks for that. The dashboards seem pretty neat now!
+[15:35:11]  <inishchith>	@aswanipranjal i think we should wait for @jgbarah and @valcos to join.
+[15:35:13]  <inishchith>	Thanks :) 
+[15:35:26]  <valcos>	no worries @aswanipranjal
+[15:35:33]  <aswanipranjal>	I am sorry but i've got to go, I have a meeting at work (sorry, it was scheduled just now :)
+[15:35:36] 	aswanipranjal (uid293292@gateway/web/irccloud.com/x-mzmzsslabfxqhlmx) left the channel
+[15:35:46]  <valcos>	Hi @inishchith, how is life?
+[15:36:28]  <inishchith>	It's good. i had an emergency in the morning so the summary shared was a bit late 
+[15:36:32]  <inishchith>	How are you?
+[15:37:03]  <valcos>	I hope the emergency got solved
+[15:37:10]  <valcos>	I'm fine thanks
+[15:37:24]  <valcos>	@jgb told me that he may be some minutes late
+[15:37:30]  <inishchith>	Yeah. Thanks! 
+[15:37:36]  <inishchith>	Oh. Okay. No worrie
+[15:37:40]  <valcos>	if you agree, we can wait for him
+[15:37:46]  <inishchith>	Sure!
+[15:38:07]  <inishchith>	@valcos meanwhile, did you get time to check the comment.
+[15:38:58]  <valcos>	this comment: https://github.com/inishchith/gsoc-graal/issues/12#issuecomment-511403239 ?
+[15:39:11]  <inishchith>	Yes
+[15:39:19] 	jgbarah (~jgb@75.red-88-1-23.dynamicip.rima-tde.net) joined the channel
+[15:39:27]  <valcos>	yes :)
+[15:39:31]  <inishchith>	Hi @jgbarah
+[15:39:39]  <valcos>	Hi @jgbarah
+[15:39:54]  <jgbarah>	Hi all!
+[15:39:58]  <jgbarah>	Sorry for being late
+[15:40:09]  <inishchith>	It's okay. No worries :)
+[15:40:23]  <inishchith>	If you all agree we can start the meeting?
+[15:40:38]  <valcos>	no worries, @aswanipranjal cannot join the meeting due to an overal with another meeting at work
+[15:40:44]  <valcos>	yes, @inishchith
+[15:41:07]  <valcos>	can you briefly summarize the work done and the issues found?
+[15:41:12]  <inishchith>	Sure!
+[15:41:52]  <valcos>	thanks
+[15:43:25]  <inishchith>	Our plan for this week was to reiterate on the dashboards(both) and some more viz. additions had to be made. 
+[15:43:59]  <inishchith>	Along with looking for some performance improvements and evaluations regarding different approaches.
+[15:45:04]  <inishchith>	We had gone through CoCom dashboard and made some quick changes, at the point, we could find an issue with the line chart results (which we had changed from a line per-repository to a line for each metric)
+[15:45:11]  <inishchith>	delegated with the help of the selector.
+[15:46:45]  <inishchith>	Along with above, the repository-level data was a major overhead (shared the evaluation earlier). So @valcos had suggested me to explore execution of study over the indexes of the commit level data
+[15:47:07]  <inishchith>	(You can check the evaluation here https://github.com/inishchith/gsoc-graal/issues/12#issuecomment-511185356)
+[15:47:49]  <inishchith>	The issue that we're currently facing is majorly in regard to the CoCom's evolution metrics.
+[15:48:28]  <inishchith>	The study could not solve the problem efficiently as of now( though some improvement over the repository level execution).
+[15:49:16]  <inishchith>	WRT. Code License dashboard, we're going good as of now we haven't encountered any performance related issue and the execution is at commit-level data.
+[15:49:56]  <inishchith>	but in order to add the evolution of licensed and copyrighted files viz. we'll need to incorporate study i feel
+[15:50:11]  <inishchith>	That's for the week. 
+[15:50:18]  <valcos>	thanks @inishchith
+[15:50:26]  <inishchith>	Please let me know if any point was unclear. Thanks!
+[15:50:33]  <jgbarah>	Great that you didn't find performance problems for the analysis of licenses!
+[15:51:18]  <valcos>	yes, but we don't have evolution data for licenses
+[15:51:32]  <inishchith>	@jgbarah yes. We had discussed to add evolution metric to CoLic dashboard, I feel the coming week we should focus on the CoCom performance issue.
+[15:51:45]  <jgbarah>	Good!
+[15:51:49]  <inishchith>	@valcos @jgbarah did you check the evaluation table?
+[15:52:01]  <valcos>	the idea is to provide visualizations at different levels to cope with scalability issue
+[15:52:27]  <valcos>	>@valcos @jgbarah did you check the evaluation table? yes
+[15:52:44]  <inishchith>	Yes agree. @valcos. That would require data from different index ( a study index )
+[15:53:06]  <valcos>	the colic and cocom dashboards should show some metrics based only on commits
+[15:53:21]  <valcos>	for instance the ccn of the files in the commit, or the licenses in it
+[15:53:39]  <valcos>	then with the study we could focus on some evolution data
+[15:54:07]  <valcos>	the approach underlying the study should be similar for cocom and colic data
+[15:54:23]  <inishchith>	Yes. @valcos agreed. 
+[15:54:28]  <jgbarah>	Yes. The most similar they are,the better
+[15:54:33]  <valcos>	for instance, for each origin, iterate over the files in the enriched index
+[15:55:01]  <inishchith>	I thought of working on CoLic evolution using study. But as you had addressed the memory issue wrt cache_dict, thought to wait and discuss about it
+[15:55:10]  <valcos>	and group them for a given time interval (every day, week, month)
+[15:55:32]  <valcos>	yes @inishchith! :)
+[15:56:17]  <valcos>	a first solution proposed by @inishchith consisted in using a cache_dict
+[15:56:17]  <inishchith>	@jgbarah @valcos, Can we split the discussion on CoCom first and then CoLic?
+[15:56:24]  <valcos>	sure!
+[15:56:37]  <jgbarah>	Yes, please
+[15:56:37]  <inishchith>	Thanks. @valcos
+[15:56:47]  <valcos>	which one you prefer first?
+[15:57:04]  <inishchith>	CoCom would be good to start with.
+[15:57:17]  <inishchith>	As it's mainly based on repository-level data as of nwo
+[15:57:19]  <inishchith>	now*
+[15:57:38]  <inishchith>	CoLic is at it's purest form :P
+[15:58:16]  <inishchith>	@valcos you're taking about the approach related to CoCom and cache_dict , please continue :)
+[15:58:47]  <valcos>	sure!
+[15:59:34]  <valcos>	so the initial idea was to use a cache to calculate the evolution of cocom attributes (ccn, loc)
+[15:59:46]  <valcos>	but the cache could consume a lot of memory
+[16:00:14]  <valcos>	so the idea would be to query elasticsearch
+[16:00:47]  <valcos>	manipulate the data as less as possible, and store in the study index
+[16:01:00]  <valcos>	WDYT @jgbarah?
+[16:02:03]  <jgbarah>	I think that's agood approach, but maybe slow...
+[16:02:14]  <jgbarah>	Do we have numbers about the memory size needed?
+[16:02:21]  <inishchith>	@jgbarah Yes
+[16:02:24]  <jgbarah>	Just in case that can be done in-memory
+[16:02:37]  <inishchith>	It's (number of repos)*(number of files in the corresponding repo)
+[16:03:06]  <jgbarah>	However, we can also go for the version based on queries, and then, if too slow, check out another one based on memory
+[16:03:20]  <inishchith>	(it's not that good, but a significant improvement over the repository-level approach that we had used earlier)
+[16:03:26]  <jgbarah>	How much data for each (repo, file)?
+[16:04:05]  <inishchith>	> It's (number of repos)*(number of files in the corresponding repo). if we take a file as an unit item with 5 fields.
+[16:04:55]  <inishchith>	is it the above clear @jgbarah? you can check it here(https://github.com/inishchith/grimoirelab-elk/blob/gsoc-graal-2019-cocom%2Bstudy/grimoire_elk/enriched/cocom.py#L170)
+[16:05:39]  <jgbarah>	Yes, i understand it is repos*files, but how big is each (repo, file) item? In bytes...
+[16:06:49]  <inishchith>	Graal is 54 files. as i checked it on CoLic dashboard
+[16:06:53]  <jgbarah>	By looking at that code, about 100-200 bytes? (cerntainly much less than 1K)
+[16:07:12]  <inishchith>	(I had earlier mistaken the number to 200 due to executables and tests, Sorry about that)
+[16:07:24]  <jgbarah>	No, I'm asking how much data de we need to store for each file
+[16:07:48]  <inishchith>	I'm not sure about it. Any idea @valcos?
+[16:08:08]  <jgbarah>	However, if it is around 1K, we can stote 1Mfiles in 1GB RAM, which is not a big deal these days... And it is rather uncommon analyzing 1Mfile
+[16:08:22]  <valcos>	yes
+[16:08:27]  <jgbarah>	In addition, probably the thing could be done by repo, which means that there is no memory problem...
+[16:08:35]  <jgbarah>	Am I wrong?
+[16:08:45]  <valcos>	maybe we can refine it even more
+[16:08:54]  <valcos>	we can iterate by repo
+[16:09:01]  <inishchith>	Oh. Okay. Thanks for the clarity @jgbarah
+[16:09:17]  <inishchith>	@valcos, Yes we can refine it. It was just an initial exploration.
+[16:09:19]  <valcos>	and then return all files in time intervals (1 week, 1 month)
+[16:09:41]  <valcos>	so then we calculate the evolution of the cocom data only of that time frame
+[16:09:50]  <valcos>	and then we move to the next time frame
+[16:09:54]  <inishchith>	@valcos Yes. (not missing out the incrementality of the data)
+[16:10:15]  <inishchith>	@valcos just to clear, you mean we do it from the enricher right?
+[16:10:25]  <inishchith>	(referring the time-frame part)
+[16:10:32]  <valcos>	yes
+[16:10:40]  <inishchith>	Thanks!
+[16:10:56]  <valcos>	the enriched index stores already the files data
+[16:11:05]  <valcos>	so it should be easier
+[16:11:08]  <valcos>	you're welcome
+[16:11:14]  <valcos>	WDYT?
+[16:11:21]  <jgbarah>	Just thinking aloud, maybe we could do it by file, retrieving all the data at once, processing it locally, and sending it back to produce an index.
+[16:11:47]  <jgbarah>	But you know the data better than me
+[16:12:24]  <valcos>	it could be an option
+[16:13:04]  <inishchith>	@valcos, haven't thought about the incremental factor, but we can surely try it out
+[16:13:46]  <inishchith>	@jgbarah About your approach, i didn't understand it clearly. 
+[16:13:57]  <inishchith>	By file
+[16:14:18]  <valcos>	the incremental factor with the analysis by time frame should be solved
+[16:14:28]  <jgbarah>	You first query the index to learn about the files in the repo
+[16:14:51]  <jgbarah>	Then, for each repo, query to get the data you need
+[16:15:05]  <jgbarah>	You upload the result to your study index
+[16:15:17]  <jgbarah>	That's it...
+[16:15:35]  <jgbarah>	Number of queries is lineal with the number of files
+[16:16:01]  <jgbarah>	Processing will need only memory for the data for each file, which should not be a lot of it
+[16:17:19]  <inishchith>	@jgbarah, Thanks for the clarity!
+[16:18:06]  <inishchith>	@valcos Yes, Thanks!
+[16:18:50]  <valcos>	the plan for next week is to focus on the study
+[16:18:56]  <valcos>	right?
+[16:19:11]  <valcos>	there are other things that could be addressed @inishchith @jgbarah?
+[16:19:29]  <inishchith>	@valcos, Yes. So we're going ahead to make improvements in the cache_dict approach right?
+[16:20:14]  <inishchith>	The approach should also work for CoLic and we can get some viz. on the evolution of licensed and copyrighted files.
+[16:20:55]  <valcos>	yes, we can go ahead with the cache_dict
+[16:21:04]  <valcos>	but we should save the items to the study index
+[16:21:10]  <inishchith>	@valcos @jgabrah any improvements for CoLic as of now? We can address the rest of the issue on the issue ticket i feel. WDYT?
+[16:21:12]  <valcos>	with a common date (the time frame)
+[16:21:22]  <inishchith>	@valcos. Yes. Thanks :) 
+[16:21:31]  <inishchith>	*@jgbarah
+[16:21:34]  <valcos>	otherwise we won't be able to aggregate them in the visualizations
+[16:21:57]  <valcos>	I agree with you @inishchith, thanks!
+[16:22:19]  <jgbarah>	Yes, from my side, we can go on in the ticket
+[16:22:32]  <inishchith>	@valcos @jgbarah any other suggestions from your side :) ?
+[16:22:49]  <valcos>	no suggestions :)
+[16:23:20]  <inishchith>	This meeting was important. Hopefully things will pace up in coming time :) 
+[16:23:21]  <jgbarah>	No, thanks!
+[16:23:38]  <jgbarah>	Sure, inishchith!
+[16:23:40]  <jgbarah>	;-)
+[16:23:40]  <valcos>	yes, indeed @inishchith
+[16:24:04]  <inishchith>	We'll next meet on Friday, 19th July at 12:30 CEST right? (just to confirm)
+[16:24:23]  <valcos>	maybe it's not needed
+[16:24:31]  <jgbarah>	I won't be available until August 1st, but please, go ahead without me
+[16:24:51]  <valcos>	as you prefer @inishchith
+[16:25:14]  <inishchith>	@valcos @jgbarah. Sure. So i'll drop a mail to schedule the next meeting. It would be better i feel
+[16:25:29]  <inishchith>	@jgbarah. Oh. No worries.
+[16:25:33]  <valcos>	ok perfect then
+[16:26:09]  <jgbarah>	Good!
+[16:26:12]  <inishchith>	So we can end the meeting now?
+[16:26:29]  <valcos>	yes from my side
+[16:26:42] 	aswanipranjal (uid293292@gateway/web/irccloud.com/x-mzmzsslabfxqhlmx) joined the channel
+[16:26:59]  <inishchith>	Perfect. I'll share the meeting log now :) Thanks for your time @jgbarah @valcos
+[16:27:11]  <valcos>	thank you for your time too @inishchith

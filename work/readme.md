@@ -31,3 +31,8 @@
 
 - **Summary:** [here](./week6/readme.md)
 - **blog-post:** [[week-6] Much needed... Pace](https://inishchith.github.io/blog/2019/07/coding-period-2-6.html)
+
+### # Week 7
+
+- **Summary:** [here](./week7/readme.md)
+- **blog-post:** [[week-7] Scope of improvement](https://inishchith.github.io/blog/2019/07/coding-period-2-7.html)
