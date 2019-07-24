@@ -46,6 +46,7 @@ Pull requests created:
 6. [chaoss/grimoirelab-graal#39](https://github.com/chaoss/grimoirelab-graal/pull/39): [cocom] Add repository level analysis via lizard **`/cp1`**
 7. [chaoss/grimoirelab-graal#40](https://github.com/chaoss/grimoirelab-graal/pull/40): [docs] Update documentation and links to requirements **`/cp2`**
 8. [chaoss/grimoirelab-graal#41](https://github.com/chaoss/grimoirelab-graal/pull/41): [analyzer] Fix scancode_cli results **`/cp2`**
+9. [chaoss/grimoirelab-graal#46](https://github.com/chaoss/grimoirelab-graal/pull/46): [cloc] Fix cloc error due to mulitple word language-name **`/cp2`**
 
 
 Issues opened:
@@ -54,6 +55,8 @@ Issues opened:
 3. [chaoss/grimoirelab-graal#33](https://github.com/chaoss/grimoirelab-graal/issues/33): [graal] Checkout log an issue in case of large repositories **`/cp1`**
 4. [chaoss/grimoirelab-graal#35](https://github.com/chaoss/grimoirelab-graal/issues/35): [analyzer] Fix results for deleted files **`/cp1`**
 5. [chaoss/grimoirelab-graal#36](https://github.com/chaoss/grimoirelab-graal/issues/36): [cocom] Evaluating results with repository level analysis **`/cp1`**
+6. [chaoss/grimoirelab-graal#47](https://github.com/chaoss/grimoirelab-graal/issues/47): [cocom] Redundant log on every file-open operation **`/cp2`**
+7. [chaoss/grimoirelab-graal#48](https://github.com/chaoss/grimoirelab-graal/issues/48): [colic] Incorrect extraction of copyright information **`/cp2`**
 
 
 **#** **Repository: grimoirelab-elk** [**`/working-branches`**](https://github.com/inishchith/grimoirelab-elk/branches)
@@ -62,6 +65,8 @@ Pull requests created:
 1. [chaoss/grimoirelab-elk#650](https://github.com/chaoss/grimoirelab-elk/pull/650): [elk] Add option to fetch from selected branches **`/cp2`**
 2. [chaoss/grimoirelab-elk#651](https://github.com/chaoss/grimoirelab-elk/pull/651): [graal] Add support of Graal's CoCom Backend to ELK **`/cp2`**
 3. [chaoss/grimoirelab-elk#653](https://github.com/chaoss/grimoirelab-elk/pull/653): [graal] Add support of Graal's CoLic Backend to ELK **`/cp2`**
+4. [chaoss/grimoirelab-elk#664](https://github.com/chaoss/grimoirelab-elk/pull/664): [graal] Add support of Graal's CoCom Backend to ELK (study approach) **`/cp2`**
+5. [chaoss/grimoirelab-elk#669](https://github.com/chaoss/grimoirelab-elk/pull/669): [graal] Add support of Graal's CoLic Backend to ELK (study approach) **`/cp2`**
 
 
 Issues opened:
@@ -107,10 +112,10 @@ Issues opened:
 + Week #2: [Summary](./work/week2) | Blog Post: [[week-2] Evaluating approaches and Initial integration of Graal](https://inishchith.github.io/blog/2019/06/coding-period-1-2.html)
 + Week #3: [Summary](./work/week3) | Blog Post: [[week-3] Ideate Visualize Repeat](https://inishchith.github.io/blog/2019/06/coding-period-1-3.html)
 + Week #4: [Summary](./work/week4) | Blog Post: [[week-4] Structuring data & Evaluating approaches](https://inishchith.github.io/blog/2019/06/coding-period-1-4.html)
-+ Week #5: [Summary](./work/week5) | Blog Post: [[week-5] And.. we have our first dashboard](https://inishchith.github.io/blog/2019/06/coding-period-1-5.html)
 
 ### Coding Period 2 - June 28th to July 26th, 2019
 
++ Week #5: [Summary](./work/week5) | Blog Post: [[week-5] And.. we have our first dashboard](https://inishchith.github.io/blog/2019/06/coding-period-1-5.html)
 + Week #6: [Summary](./work/week6) | Blog Post: [[week-6] Much needed... Pace](https://inishchith.github.io/blog/2019/07/coding-period-2-6.html)
 + Week #7: [Summary](./work/week7) | Blog Post: [[week-7] Scope of improvement](https://inishchith.github.io/blog/2019/07/coding-period-2-7.html)
 
