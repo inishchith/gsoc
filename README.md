@@ -118,6 +118,7 @@ Issues opened:
 + Week #5: [Summary](./work/week5) | Blog Post: [[week-5] And.. we have our first dashboard](https://inishchith.github.io/blog/2019/06/coding-period-1-5.html)
 + Week #6: [Summary](./work/week6) | Blog Post: [[week-6] Much needed... Pace](https://inishchith.github.io/blog/2019/07/coding-period-2-6.html)
 + Week #7: [Summary](./work/week7) | Blog Post: [[week-7] Scope of improvement](https://inishchith.github.io/blog/2019/07/coding-period-2-7.html)
++ Week #8: [Summary](./work/week8) | Blog Post: [[week-8] Finalizing the Enrichment phase](https://inishchith.github.io/blog/2019/07/coding-period-2-8.html)
 
 
 <br>

@@ -1,0 +1,77 @@
+[17:26:05]  <valcos>	Hi inishchith
+[17:26:18]  <valcos>	could you summarize the work done and blockers?
+[17:26:19]  <inishchith>	Hi, valcos aswanipranjal. 
+[17:26:45]  <inishchith>	Sure. 
+[17:27:22]  <valcos>	thanks!
+[17:27:28]  <inishchith>	1. We had discussed the optimization approaches in the last meeting in order to tackle performance issues related to memory and time. This week we spend time implementing and evaluating them and making possible refinements along with some bug fixes.
+[17:28:07]  <inishchith>	2. WRT to the new approach, we could completely get rid of the extra memory(`cach_dict`) but have traded some execution time against it. ( Evaluation results can be found here: https://github.com/inishchith/gsoc-graal/issues/12#issuecomment-513330884 ) and have decided to go ahead with it.
+[17:28:37]  <inishchith>	3. We have a few minor issues which I've addressed on this thread [ https://github.com/chaoss/grimoirelab-elk/pull/664 ] and I'll be trying to get them resolved as soon as possible.
+[17:29:25]  <inishchith>	4. Earlier the visualizations were bind to repository-level data. Now, we have them segregated into different levels (file/commit-level and ones obtained via study.) and we have refined dashboards corresponding to the work done on the data (at commit and study levels).
+[17:30:03]  <inishchith>	5. We earlier had concerns related to the implementation of evolution metrics and their viz. now we have a few viz. on the dashboard with the help of study index data.
+[17:30:14]  <valcos>	aswanipranjal please check the dashboards at: https://grimoirelab-incubator.biterg.io
+[17:30:20]  <valcos>	any feedback is welcomed
+[17:30:20]  <inishchith>	6. Few more fields were added to the data-tables such as (lines_per_comment and lines_per_blank)
+[17:30:31]  <aswanipranjal>	thanks valcos!
+[17:30:43]  <inishchith>	That was the work done until now. 
+[17:31:14]  <inishchith>	I could have missed some minor work. But yeah, above were some major highlights :)
+[17:31:35]  <inishchith>	Sorry for the delay caused today. 
+[17:31:39]  <valcos>	nice! thank you for the summary inishchith
+[17:31:43]  <valcos>	no worries
+[17:31:57]  <inishchith>	you're welcome! valcos
+[17:32:03]  <valcos>	any blockers?
+[17:32:48]  <inishchith>	I spent a bit more time on the implementation (code) for the new-idea (interval based query-chunk) 
+[17:33:17]  <valcos>	ok!
+[17:33:22]  <inishchith>	Which had a few bugs initially, but now they are way less and addressed so I can fix them soon.
+[17:33:38]  <inishchith>	Other than that, it went well.
+[17:33:58]  <valcos>	cool!
+[17:34:30]  <inishchith>	Any questions valcos aswanipranjal related to the work done until this point? ( or anything that wasn't clear) 
+[17:35:30]  <valcos>	you think we can finalize the work by the beginning of next week?
+[17:35:31]  <aswanipranjal>	`lines_per_blank` as in the ratio of lines of code and blank lines?
+[17:35:49]  <valcos>	finalize the work == this current iteration
+[17:36:26]  <inishchith>	aswanipranjal. Its total lines (LOC + blank + comments)/blank 
+[17:36:45]  <aswanipranjal>	thanks inishchith
+[17:36:51]  <inishchith>	I had a doubt here. Whether it should be LOC/blank or the above 
+[17:37:12]  <aswanipranjal>	LOC/blank makes more sense, IMHO
+[17:37:55]  <inishchith>	Thanks aswanipranjal
+[17:38:45]  <inishchith>	> you think we can finalize the work by the beginning of next week?. Yes, I think it can be done.
+[17:39:34]  <valcos>	cool!
+[17:40:13]  <inishchith>	do you think LOC/function would be a useful addition?
+[17:40:53]  <inishchith>	As there might be lines which aren't covered under a function sometimes. 
+[17:42:39]  <valcos>	yes, I think so
+[17:42:54]  <valcos>	it makes sense
+[17:43:23]  <valcos>	@aswanipranjal, do you have any suggestions wrt the dashboards?
+[17:43:56]  <aswanipranjal>	They look good to me valcos, I am still going through them though
+[17:44:05]  <aswanipranjal>	I'll comment if I feel something can be improved
+[17:44:18]  <inishchith>	Sure. Thanks. aswanipranjal. 
+[17:44:31]  <aswanipranjal>	inishchith: when you calculate functions per file, how does it take care of closures?
+[17:45:51]  <inishchith>	aswanipranjal. functions per file is returned via our analyzer (lizard)
+[17:46:21]  <aswanipranjal>	yeah, I just wanted to know how closures are handled in that
+[17:47:14]  <aswanipranjal>	sorry, this might not be something that important to look into. I was just curious
+[17:47:21]  <inishchith>	I'll have to look at lizard more closely. @valcos any idea?
+[17:47:53]  <aswanipranjal>	> do you think LOC/function would be a useful addition?
+[17:47:54]  <aswanipranjal>	i agree with valcos
+[17:50:31]  <valcos>	I don't know how to lizar work under the hood
+[17:50:33]  <valcos>	lizard
+[17:51:07]  <valcos>	graal has been created with this intent: use existing tool to analyze code (which is something not really straightforward)
+[17:51:37]  <valcos>	any else to comment @aswanipranjal @inishchith?
+[17:51:38]  <inishchith>	aswanipranjal just having a quick look over the (lizard analyzer) what i understand is it detect a function and returns the line number. That means in case a function contains x function should returns x+1. 
+[17:52:07]  <inishchith>	(+1 for the top level).
+[17:52:28]  <aswanipranjal>	nice! thanks inishchith!
+[17:52:38]  <aswanipranjal>	nothing more from my side valcos
+[17:52:41]  <valcos>	thanks inishchith
+[17:52:42]  <valcos>	ok
+[17:53:01]  <inishchith>	valcos No. I think an iteration over the PR. maybe we can improve it over this weekend
+[17:53:13]  <valcos>	sure!
+[17:53:29]  <valcos>	I'll check the PR
+[17:53:34]  <valcos>	or i should check both?
+[17:53:55]  <inishchith>	Thanks. You can check CoCom integration as both are aligned and similar
+[17:54:02]  <valcos>	perfect!
+[17:54:06]  <valcos>	thanks!
+[17:54:33]  <inishchith>	Thanks. We can discuss over the reviews on that. Anything else?
+[17:54:58]  <valcos>	nothing from my side
+[17:55:11]  <aswanipranjal>	Nothing from my side either
+[17:55:21]  <valcos>	thank you aswanipranjal inishchith
+[17:56:14]  <inishchith>	Cool. Thanks for your time valcos aswanipranjal. Also i think today is the end of 2nd evaluation period.
+[17:56:17]  <aswanipranjal>	Thanks inishchith , valcos for your time!
+[17:56:58]  <inishchith>	We can pace up probably from here on :)  and push more improvements
+[17:58:47]  <inishchith>	aswanipranjal valcos I'll share the log now. 

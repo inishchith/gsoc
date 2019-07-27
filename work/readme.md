@@ -36,3 +36,8 @@
 
 - **Summary:** [here](./week7/readme.md)
 - **blog-post:** [[week-7] Scope of improvement](https://inishchith.github.io/blog/2019/07/coding-period-2-7.html)
+
+### # Week 8
+
+- **Summary:** [here](./week8/readme.md)
+- **blog-post:** [[week-8] Finalizing the Enrichment phase](https://inishchith.github.io/blog/2019/07/coding-period-2-8.html)
