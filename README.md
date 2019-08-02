@@ -67,6 +67,7 @@ Pull requests created:
 3. [chaoss/grimoirelab-elk#653](https://github.com/chaoss/grimoirelab-elk/pull/653): [graal] Add support of Graal's CoLic Backend to ELK **`/cp2`**
 4. [chaoss/grimoirelab-elk#664](https://github.com/chaoss/grimoirelab-elk/pull/664): [graal] Add support of Graal's CoCom Backend to ELK (study approach) **`/cp2`**
 5. [chaoss/grimoirelab-elk#669](https://github.com/chaoss/grimoirelab-elk/pull/669): [graal] Add support of Graal's CoLic Backend to ELK (study approach) **`/cp2`**
+6. [chaoss/grimoirelab-elk#672](https://github.com/chaoss/grimoirelab-elk/pull/672): [graal] Add support of Graal CoCom & CoLic Backend (finalized) **`/cp3`**
 
 
 Issues opened:
