@@ -41,3 +41,8 @@
 
 - **Summary:** [here](./week8/readme.md)
 - **blog-post:** [[week-8] Finalizing the Enrichment phase](https://inishchith.github.io/blog/2019/07/coding-period-2-8.html)
+
+### # Week 9
+
+- **Summary:** [here](./week9/readme.md)
+- **blog-post:** [[week-9] The Final Coding Phase](https://inishchith.github.io/blog/2019/08/coding-period-3-9.html)

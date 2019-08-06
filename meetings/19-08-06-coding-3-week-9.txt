@@ -1,0 +1,97 @@
+[2019-08-06 14:59:32] → inishchith joined (~inishchit@171.50.234.162)
+[2019-08-06 15:00:34] ⇐ inishchith quit (~inishchit@171.50.234.162): Client Quit
+[2019-08-06 15:01:58] <jgbarah> Hi, aswanipranjal, it seems inishchith is entering and leaving... Or am I partitioned away?
+[2019-08-06 15:02:51] <aswanipranjal> Hey jgbarah! I see a notification of him joining, but not one of his leaving. I cannot see him in the channel though
+[2019-08-06 15:03:30] <jgbarah> I see a client quit from him... Maybe he is having connectivity issues.
+[2019-08-06 15:03:40] <aswanipranjal> yeah, probably
+[2019-08-06 15:06:59] → inishchith joined (ab32eaa2@171.50.234.162)
+[2019-08-06 15:07:10] <inishchith> Hi aswanipranjal jgbarah
+[2019-08-06 15:07:22] <aswanipranjal> Hey inishchith!
+[2019-08-06 15:07:39] <inishchith> Sorry for the delay, I had an issue with the IRC Client ;(
+[2019-08-06 15:08:17] <jgbarah> Hi, inishchith! No worries
+[2019-08-06 15:08:19] <aswanipranjal> No worries
+[2019-08-06 15:08:33] <inishchith> Thanks, so can we start the meeting?
+[2019-08-06 15:08:34] <jgbarah> Valerio is still on vacation, so I think we're all here
+[2019-08-06 15:08:40] <jgbarah> Yes, let's start.
+[2019-08-06 15:08:45] <inishchith> Yes. Sure!
+[2019-08-06 15:09:17] <inishchith> I had shared this week's summary a few hours back. I'll brief them here if you agree
+[2019-08-06 15:09:19] <jgbarah> i was reading your status update, thanks a lot for it
+[2019-08-06 15:09:26] <inishchith> Thanks!
+[2019-08-06 15:09:42] <jgbarah> Yes, please, focus on the issues solved and the blockers you may have.
+[2019-08-06 15:11:37] <inishchith> 1. valcos and I worked on reviewing the integration PR, we'd found a few redundancy and common methods among both the backends so planned to unify the PR and review it all together
+[2019-08-06 15:13:10] <jgbarah> OK. valcos is (I think) comming back from vacation on 8th or 9th, so maybe it is better that you follow on that specific discussion with him
+[2019-08-06 15:13:11] <inishchith> After iterating on the PR, I had started working on adding tests and improving the coverage. It can be found here (https://github.com/chaoss/grimoirelab-elk/pull/672)
+[2019-08-06 15:14:08] <inishchith> Okay. So in today's meeting we can focus on the future task list (https://github.com/inishchith/gsoc/issues/16) if you agree jgbarah aswanipranjal
+[2019-08-06 15:14:35] <aswanipranjal> yes please inishchith
+[2019-08-06 15:14:58] <inishchith> Did you go through the list once?
+[2019-08-06 15:16:03] <jgbarah> Yes.
+[2019-08-06 15:16:24] <jgbarah> I was checking your comment about nomos.
+[2019-08-06 15:16:24] <aswanipranjal> yeah
+[2019-08-06 15:16:40] <jgbarah> i think that would be a good add, and as you say, doesn't seem difficult
+[2019-08-06 15:16:45] <inishchith> So the check marked ones are finished and currently I'm working on the (red) flagged ones.
+[2019-08-06 15:17:36] <inishchith> jgbarah Yes. We had started off with ScanCode CLI, and yesterday I could integrate the default ScanCode.
+[2019-08-06 15:17:43] <jgbarah> Good!
+[2019-08-06 15:17:58] <jgbarah> In addition, I think " Initial evaluation on small/medium size repositories " is important
+[2019-08-06 15:18:16] <inishchith> I was checking out NOMOS. It doesn't provide copyright information, so I was exploring if there's a possibility
+[2019-08-06 15:18:36] <jgbarah> We only have about 2.5 weeks now, and having a well checked implementation is important
+[2019-08-06 15:19:00] <jgbarah> WRT to nomos not having copyright information, don't worry. We don't need all back ends to do the same...
+[2019-08-06 15:19:26] <inishchith> jgbarah Agree with you. I'm about to finish the category integration (should be done by today end). and then i can focus on the regressive evaluation.
+[2019-08-06 15:19:28] <jgbarah> nomos is interesting because it will allow us to compare its licensing analysis with the current results
+[2019-08-06 15:19:35] <jgbarah> ok
+[2019-08-06 15:20:07] <inishchith> aswanipranjal Last time we'd discussed some errors in CoCom dashboard data-table if you remember.
+[2019-08-06 15:20:13] <jgbarah> I would also focus on "Heavily Testing the integration", which is about the same...
+[2019-08-06 15:20:50] <aswanipranjal> yeah inishchith
+[2019-08-06 15:21:05] <jgbarah> And you can decide with valcos on Thursday / Friday to which extent to iterate in the dashboards, which i find pretty interesting, but maybe it is good that he decides
+[2019-08-06 15:21:15] <aswanipranjal> I am not sure I remember the errors, can you please remind me once more?
+[2019-08-06 15:21:36] <inishchith> jgbarah Exactly. aswanipranjal So, We've fixed it, you can go over it here (https://grimoirelab-incubator.biterg.io/app/kibana#/dashboard/9a00bc60-9900-11e9-82c4-37956b0c932a) once.
+[2019-08-06 15:22:10] <aswanipranjal> thanks inishchith!
+[2019-08-06 15:22:21] <inishchith> jgbarah Sure. We're about to start the 3rd iteration (based on PR integration and new fields) after valcos returns.
+[2019-08-06 15:22:44] <inishchith> aswanipranjal The errors were regarding the ratio metrics.
+[2019-08-06 15:22:57] <jgbarah> OK. I see we're on the same page. Only have in mind that we should start closing issues, so that everything is well packaged
+[2019-08-06 15:23:01] <jgbarah> by the end of GSoC
+[2019-08-06 15:23:03] <inishchith> (comments per loc, loc per function)
+[2019-08-06 15:23:50] <aswanipranjal> > aswanipranjal The errors were regarding the ratio metrics.
+[2019-08-06 15:23:50] <aswanipranjal> yes inishchith
+[2019-08-06 15:24:39] <inishchith> jgbarah Agree. I'm focusing on reducing the redundancy so that once the integration is finalized we can spend more time on testing it heavily.
+[2019-08-06 15:25:11] <inishchith> Also not forgetting the documentation addition to the grimoirelab-tutorial.
+[2019-08-06 15:25:15] <jgbarah> Good!
+[2019-08-06 15:25:32] <inishchith> Thanks. aswanipranjal any comments on the data-table?
+[2019-08-06 15:25:45] <jgbarah> Anything else, inishchith, while aswanipranjal comments
+[2019-08-06 15:25:48] <jgbarah> ?
+[2019-08-06 15:26:01] <inishchith> Yes. Just a question.
+[2019-08-06 15:26:39] <aswanipranjal> It looks good inishchith. The LOC only contain Lines of code now, right? Not LOC + Blank + Comments
+[2019-08-06 15:26:47] <inishchith> jgbarah a thread about the ratio metrics (https://github.com/chaoss/grimoirelab-elk/pull/664#discussion_r307904949)
+[2019-08-06 15:26:53] <inishchith> aswanipranjal Yes.
+[2019-08-06 15:27:02] <aswanipranjal> okay, thanks
+[2019-08-06 15:27:43] <inishchith> aswanipranjal jgbarah Please have a go through over the comment linked above. Please do let me know if something is unclear.
+[2019-08-06 15:29:21] <jgbarah> inishchith: about LOC per function or function per LOC, I also prefer the former.
+[2019-08-06 15:30:14] <jgbarah> In case of doubt, maybe for some metric we could provide both, but for now, I think LOC per x would be good enough.
+[2019-08-06 15:30:18] <jgbarah> Was that the question?
+[2019-08-06 15:31:10] <inishchith> Yes. LOC per function makes sense. Is LOC per comment informative?
+[2019-08-06 15:31:36] <inishchith> We're currently having comments per LOC as valcos suggested in the thread.
+[2019-08-06 15:31:50] → Polaris000 joined (~Polaris00@136.233.33.82)
+[2019-08-06 15:32:05] <Polaris000> Hi jgbarah ,inishchith and aswanipranjal
+[2019-08-06 15:32:17] <inishchith> Hi Polaris000 :)
+[2019-08-06 15:32:26] <Polaris000> How are you doing inishchith?
+[2019-08-06 15:32:37] <jgbarah> Hi, Polaris000. we're finishing the meeting with inishchith.
+[2019-08-06 15:32:45] <Polaris000> Oh.. sorry. please carry on
+[2019-08-06 15:33:20] <inishchith> Polaris000 It's going great. and you?
+[2019-08-06 15:33:33] <jgbarah> inishchith: no, I don't think so. Yes, comments per LOC is better.
+[2019-08-06 15:33:52] <inishchith> Okay. Thanks!
+[2019-08-06 15:33:55] <jgbarah> inishchith: I propose that you do as it seems better to you, if nobody said anything against
+[2019-08-06 15:34:29] <jgbarah> inishchith: I m just thinking that maybe in some vases you want both ratios, but well, we can check that as you progress
+[2019-08-06 15:34:37] <jgbarah> inishchith: Anything else?
+[2019-08-06 15:34:57] <inishchith> Sure. jgbarah. Nothing else from my side.
+[2019-08-06 15:35:30] <jgbarah> aswanipranjal: anthing else for inishchith?
+[2019-08-06 15:36:12] <aswanipranjal> sorry, there was a network latency. Nothing else from my side. inishchith, I'll comment on the thread, thanks!
+[2019-08-06 15:36:41] <inishchith> Thanks! aswanipranjal I have a different(weird) IRC client(today) which doesn't let me me export logs. Can you mail me the logs after the meeting?
+[2019-08-06 15:36:51] <aswanipranjal> sure!
+[2019-08-06 15:37:36] <inishchith> Thanks a lot!. jgbarah aswanipranjal So can we end the meeting? Please feel free to comment on the issue thread
+[2019-08-06 15:38:12] <jgbarah> inishchith: Thanks! Yes. Plese, send the usual log and everythng. And I suggest you contact valcos in a couple of days, to sync with him
+[2019-08-06 15:38:19] <jgbarah> (I will talk to him too, anyway)
+[2019-08-06 15:38:24] <jgbarah> By, inishchith!
+[2019-08-06 15:38:33] <jgbarah> (Bye, I meant ;-) )
+[2019-08-06 15:38:39] <Polaris000> Bye inishchith
+[2019-08-06 15:38:46] <jgbarah> Polaris000: can we start?
+[2019-08-06 15:38:50] <Polaris000> sure!
+[2019-08-06 15:38:51] <inishchith> Yes. Sure. jgbarah.  Bye everyone:)
