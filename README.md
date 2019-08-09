@@ -85,6 +85,11 @@ Pull requests created:
 Issues opened:
 1. [chaoss/grimoirelab-tutorial#84](https://github.com/chaoss/grimoirelab-tutorial/issues/84): [components] How to play with Grimoirelab components **`/cp1`**
 
+**#** **Repository: sirmordred** [**`/working-branches`**](https://github.com/inishchith/grimoirelab-sirmordred/tree/graal_integration_config)
+
+Pull requests created:
+1. [chaoss/grimoirelab-sirmordred#320](https://github.com/chaoss/grimoirelab-sirmordred/pull/320): [graal] Add configuration for Graal integration in ELK **`/cp3`**
+
 
 **#** **Repository: metrics** **`/working-branches`**
 

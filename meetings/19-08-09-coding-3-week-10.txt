@@ -1,0 +1,76 @@
+[3:56pm] valcos: hi inishchith
+[3:56pm] inishchith: Hi valcos :)
+[3:56pm] jgbarah joined the chat room.
+[3:56pm] valcos: how are you doing?
+[3:56pm] valcos: Hi @jgbarah
+[3:57pm] jgbarah: Hi, valcos!!!
+[3:57pm] inishchith: Hi @jgbarah!
+[3:57pm] jgbarah: Fine ;-)
+[3:57pm] inishchith: I’m good. How are you?
+[3:57pm] jgbarah: hi, inishchith!
+[3:57pm] valcos: I'm fine thanks
+[3:59pm] inishchith: Is @aswanipranjal going to join the meeting?
+[3:59pm] valcos: I guess so
+[3:59pm] valcos: maybe we can wait 5 minutes more
+[3:59pm] valcos: WDYT?
+[3:59pm] jgbarah: valcos: when coming back from vacation, you're never fine ;-) (I mean: neither you, neither anybody)
+[3:59pm] jgbarah: i can wait, no worries
+[4:00pm] valcos: eheheh that's true @jgbarah
+[4:01pm] valcos: this morning was hard to hear the alarm clock
+[4:02pm] inishchith: XD
+[4:05pm] valcos: shall we start?
+[4:05pm] valcos: @inishchith could you briefly summarize the work done and blockers found?
+[4:06pm] inishchith: Sure!.
+[4:06pm] valcos: thanks
+[4:06pm] inishchith: Did you get time to check the last meeting summary? ( i guess no ;) )
+[4:08pm] inishchith: 1. In the last meeting, we had discussed tasks which we aim to complete in future ( here: https://github.com/inishchith/gsoc/issues/16)
+[4:08pm] valcos: not really
+[4:08pm] valcos: I read a bit the IRC log
+[4:08pm] inishchith: Okay. no worries :)
+[4:09pm] valcos: thanks
+[4:10pm] inishchith: 2. We discussed about the ratio metrics which were incorrect earlier (https://github.com/chaoss/grimoirelab-elk/pull/664#discussion_r307904949). @jgbarah suggested that the LOC per function and Blank(/Comment) lines per LOC makes more sense but we can have multiple ratio metrics which can be added later.
+[4:11pm] inishchith: 3. On Tuesday, I was about to finish the tests for integration PR along with the addition of support for other(NOMOS & ScanCode) CoLic analyzer. Which is now complete.
+[4:11pm] inishchith: along with finalizing the integration PR.
+[4:12pm] inishchith: 4. NOMOS doesn’t provide copyright related information (like the ScanCode & It’s CLI version) so i had to leave the fields of information (as @jgbarah suggested that every analyzer doesn’t need to do the same stuff) we’re primarily focusing on NOMOS because of it’s speed.
+[4:13pm] inishchith: So yeah. That’s it for this week, we’re currently in sync with the task-list. and I’m about to start with working on evaluating the integration with different repositories
+[4:13pm] valcos: ok, great! thanks for the summary
+[4:14pm] inishchith: you’re welcome.
+[4:14pm] valcos: I'll review this PR: https://github.com/chaoss/grimoirelab-elk/pull/672
+[4:14pm] valcos: you could open one on mordred to enable the repository study?
+[4:14pm] inishchith: Sure. Thanks!. I’ve added the schema. It might require a few changes, which we can do during the code-review :)
+[4:15pm] valcos: sure! no worries
+[4:15pm] inishchith: @valcos. Yes. It’d mainly consisit of the reference for config files right?
+[4:16pm] valcos: yes
+[4:16pm] valcos: if you find it useful, I can share some code
+[4:17pm] valcos: once the initial evaluation is ready, we could think about writing a blogpost here: https://blog.bitergia.com/
+[4:17pm] valcos: and start some dissemination of the work done
+[4:17pm] inishchith: @valcos If I’m not mistaken there wouldn’t be any changes wrt to code in mordred right?
+[4:17pm] valcos: WDYT @jgbarah @inishchith?
+[4:18pm] valcos: yes, you are right, no changes just some additions
+[4:18pm] valcos: https://github.com/chaoss/grimoirelab-sirmordred/blob/master/sirmordred/config.py#L665
+[4:19pm] inishchith: Yes. Exactly.
+[4:19pm] inishchith: And a few description on documentation (if needed)
+[4:19pm] valcos: and here: https://github.com/chaoss/grimoirelab-sirmordred/blob/master/tests/test_studies.cfg
+[4:19pm] valcos: yes!
+[4:19pm] inishchith: Which can be done once we finalize the elk PR.
+[4:20pm] inishchith: @valcos Agree with the blog-post idea. We can do it.
+[4:21pm] valcos: perfect! We can merge the PR in ELK after the initial evaluation (in case we have to provide some fixes)
+[4:21pm] valcos: WDYT?
+[4:22pm] inishchith: Agree. That would be great. I think if you also test it locally once it would be better.
+[4:22pm] valcos: yes sure! I'll check it with a couple of medium size repos
+[4:23pm] valcos: something else to comment/discuss?
+[4:23pm] valcos: potential blockers/new ideas
+[4:23pm] inishchith: Thanks!. you can have a look at the issue here (https://github.com/inishchith/gsoc/issues/16) In case we’ve missed something, you can suggest :) ( red flags are on-going tasks)
+[4:24pm] valcos: sure, thanks for the pointer
+[4:24pm] inishchith: @valcos No blockers as of now. I’m moving to evaluation of repositories maybe that should take time, but we can address it later.
+[4:24pm] inishchith: @valcos @jgbarah anything else?
+[4:25pm] valcos: perfect, thanks @inishchith
+[4:25pm] valcos: not from my side
+[4:26pm] inishchith: I think @jgbarah has left the chat :!
+[4:27pm] valcos: it's possible there are some connection problems, I saw him entering and leaving before starting the meeting
+[4:27pm] valcos: let's end the meeting then
+[4:28pm] valcos: we can point him to the issues/prs in case he wants to comment
+[4:28pm] inishchith: Okay. No worries. Sure. Thanks for your time :)
+[4:29pm] valcos: thanks for your time too
+[4:29pm] valcos: bye :)
+[4:29pm] inishchith: I’ll share the meeting logs now.. Bye!
