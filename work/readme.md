@@ -46,3 +46,8 @@
 
 - **Summary:** [here](./week9/readme.md)
 - **blog-post:** [[week-9] The Final Coding Phase](https://inishchith.github.io/blog/2019/08/coding-period-3-9.html)
+
+### # Week 10
+
+- **Summary:** [here](./week10/readme.md)
+- **blog-post:** [[week-10] Regression testing & Evaluating results](https://inishchith.github.io/blog/2019/08/coding-period-3-10.html)

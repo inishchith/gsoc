@@ -1,0 +1,100 @@
+[4:01pm] inishchith: Hi everyone!
+[4:01pm] valcos: Hi inishchith
+[4:02pm] inishchith: How are you?
+[4:02pm] valcos: fine, thanks and you? how is it going?
+[4:03pm] inishchith: It’s going good. Was just looking at the scancli error due to elk repo. couldn’t figure out what’s the issue.
+[4:04pm] inishchith: Are @jgbarah and @aswanipranjal going to join?
+[4:04pm] valcos: jgbarah is on vacation
+[4:04pm] inishchith: Oh.
+[4:04pm] valcos: aswanipranjal should join (afaik)
+[4:05pm] valcos: we can wait 5 minutes
+[4:05pm] valcos: wdyt?
+[4:05pm] inishchith: Sure. Okay
+[4:06pm] valcos: ok, thanks
+[4:06pm] inishchith: :)
+[4:11pm] valcos: shall we start?
+[4:12pm] inishchith: Sure.
+[4:13pm] valcos: ok, let's start with the errors on the colic analyis
+[4:13pm] valcos: can you summarize the status there, please?
+[4:14pm] inishchith: I’ve never encountered this before. From what i understand is it cannot find a path and hence the key error. i tested it with other repos, it works fine.
+[4:15pm] valcos: mmm it happens just in ELK, right?
+[4:15pm] inishchith: But even if we ignore the error for elk repo. I found it’s execution to be very slow.
+[4:16pm] valcos: yep, this is a bit strange
+[4:16pm] valcos: have you compared scancli and scancode using only graal?
+[4:16pm] inishchith: @valcos Yes. but if you check the log you had shared earlier this week ( wrt scancli evaluation) even you had encountered it. There’s some similarity not sure which repo was it.
+[4:17pm] inishchith: Scancli took ~43mins and am currently executing scancode with graal.
+[4:18pm] valcos: scancli took 43 mins with graal, right?
+[4:18pm] inishchith: Yes. 192 commits.
+[4:18pm] valcos: ok, thanks
+[4:19pm] valcos: which release of scancode are you using (https://github.com/nexB/scancode-toolkit)?
+[4:19pm] inishchith: I had 3.0.2
+[4:20pm] inishchith: Then i used a clone instead of a release
+[4:20pm] inishchith: due to the scancli support that we had added (if you remember, long time ago)
+[4:21pm] valcos: ok, in case the scancode execution you are running takes a similar time of scancli
+[4:21pm] valcos: can you open a issue on graal?
+[4:21pm] inishchith: Sure. I’ll do that.
+[4:21pm] valcos: thanks
+[4:21pm] valcos: wrt the first error, you could also open an issue on graal
+[4:22pm] valcos: then we can decide what to do
+[4:22pm] valcos: beyond these two problems, there is something else?
+[4:22pm] inishchith: Yes. I’m just looking f the error can be resolved. If not I’ll add details under the issue ticket.
+[4:22pm] valcos: thank you
+[4:22pm] inishchith: Did you get time to check the sigils panels ( latest commits )?
+[4:23pm] valcos: no, I'll do it in a couple of hours (sorry for the delay)
+[4:23pm] valcos: > beyond these two problems, there is something else?
+[4:23pm] inishchith: Sure!. No worries.
+[4:23pm] valcos: checkout issue, right?
+[4:24pm] inishchith: You had said you were looking into it.
+[4:24pm] inishchith: If you want, I can take it
+[4:24pm] valcos: yes, I wasn't able to reproduce it
+[4:25pm] valcos: can you open an issue for that too, so we can sync there
+[4:25pm] inishchith: ( After scancli test, i was supposed to work on the mordred PR ) i.e importing using mordred
+[4:25pm] inishchith: Sure. I’ll pick the logs that you’ve shared if you agree.
+[4:25pm] valcos: ok, you can include in the mordred PR the code shared yesterday on the sigils PR
+[4:26pm] valcos: > If you want, I can take it
+[4:26pm] valcos: yes, you can
+[4:26pm] inishchith: Sure. I’m yet to test the mordred code that you’ve shared, if possible I’ll do it by tonight
+[4:26pm] inishchith: Thanks!
+[4:26pm] valcos: I can focus on testing the sigils PR and then get back to you to get some of the pending issues
+[4:27pm] inishchith: Sure. Sounds good.
+[4:27pm] valcos: there is something you want to comment (we have forgot to comment)?
+[4:27pm] valcos: > Sure. Sounds good.
+[4:27pm] valcos: great, thanks
+[4:28pm] inishchith: Umm. No. did you encounter any other issue during the tests? I’ve addressed the ones i found from the logs and the execution time.
+[4:28pm] valcos: except the errors in the dashboards (which may have been fixed with the latest changes on the sigils PR)
+[4:28pm] valcos: no new errors
+[4:29pm] valcos: to be sure we have everything on the radar
+[4:29pm] inishchith: Oh. Cool. Thanks!
+[4:29pm] valcos: there are 3 issues with graal
+[4:29pm] valcos: - checkout issue
+[4:29pm] valcos: - scancli issue (files not found)
+[4:29pm] valcos: - slow execution of scancli
+[4:30pm] inishchith: Yes. Correct.
+[4:30pm] valcos: then we have the sigils pr
+[4:30pm] valcos: then we have the mordred pr
+[4:30pm] inishchith: Yes.
+[4:30pm] valcos: the early evaluation is basically completed
+[4:31pm] valcos: something else that was stated in the roadmap?
+[4:31pm] inishchith: I’m left with adding documentation under tutorials for Graal Dashboard.
+[4:32pm] inishchith: I needed pointers for it. What sections to include.
+[4:32pm] valcos: maybe we can decrease the priority of the documentation
+[4:33pm] valcos: we should make sure that the whole chain is working
+[4:33pm] valcos: (I guess we are really close to it)
+[4:33pm] inishchith: Agree. Nothing else, that i can think of.
+[4:33pm] valcos: ok, great!
+[4:34pm] valcos: the current status is pretty good
+[4:34pm] inishchith: Thanks :) . Anything else?
+[4:34pm] valcos: i don't think so
+[4:35pm] valcos: we can keep talking during the day (I'll ping you when I reviewed the PR on sigils)
+[4:35pm] inishchith: Oh. Okay. Then I’ll open the issues and update the task list for next few days.
+[4:35pm] inishchith: Sure. Thanks
+[4:35pm] valcos: thanks
+[4:35pm] valcos: I'll be probably working this weekend
+[4:36pm] valcos: so don't hesitate to ping me
+[4:36pm] inishchith: Even me. Sure.
+[4:36pm] valcos: cool!
+[4:36pm] valcos: if you agree, we can end the meeting
+[4:37pm] inishchith: Sure. I’ll share the logs in some time. and open issue tickets as discussed.
+[4:37pm] valcos: thanks :)
+[4:37pm] valcos: bye
+[4:37pm] inishchith: bye :)

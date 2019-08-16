@@ -59,6 +59,9 @@ Issues opened:
 6. [chaoss/grimoirelab-graal#47](https://github.com/chaoss/grimoirelab-graal/issues/47): [cocom] Redundant log on every file-open operation **`/cp2`**
 7. [chaoss/grimoirelab-graal#48](https://github.com/chaoss/grimoirelab-graal/issues/48): [colic] Incorrect extraction of copyright information **`/cp3`**
 8. [chaoss/grimoirelab-graal#49](https://github.com/chaoss/grimoirelab-graal/issues/49): [colic] Add copyright flag for extraction of copyright information **`/cp3`**
+9. [chaoss/grimoirelab-graal#54](https://github.com/chaoss/grimoirelab-graal/issues/54): [colic] Slow execution of ScanCode-CLI **`/cp3`**
+10. [chaoss/grimoirelab-graal#55](https://github.com/chaoss/grimoirelab-graal/issues/55): [colic] KeyError on execution of ELK with ScanCode-CLI **`/cp3`**
+11. [chaoss/grimoirelab-graal#56](https://github.com/chaoss/grimoirelab-graal/issues/56): [cocom] Impossible to checkout the worktree **`/cp3`**
 
 
 **#** **Repository: grimoirelab-elk** [**`/working-branches`**](https://github.com/inishchith/grimoirelab-elk/branches)
@@ -85,10 +88,16 @@ Pull requests created:
 Issues opened:
 1. [chaoss/grimoirelab-tutorial#84](https://github.com/chaoss/grimoirelab-tutorial/issues/84): [components] How to play with Grimoirelab components **`/cp1`**
 
-**#** **Repository: sirmordred** [**`/working-branches`**](https://github.com/inishchith/grimoirelab-sirmordred/tree/graal_integration_config)
+**#** **Repository: grimoirelab-sirmordred** [**`/working-branches`**](https://github.com/inishchith/grimoirelab-sirmordred/tree/graal_integration_config)
 
 Pull requests created:
 1. [chaoss/grimoirelab-sirmordred#320](https://github.com/chaoss/grimoirelab-sirmordred/pull/320): [graal] Add configuration for Graal integration in ELK **`/cp3`**
+
+
+**#** **Repository: grimoirelab-sigils** [**`/working-branches`**](https://github.com/inishchith/grimoirelab-sigils/tree/graal_panels)
+
+Pull requests created:
+1. [chaoss/grimoirelab-sigils#380](https://github.com/chaoss/grimoirelab-sigils/pull/380): [graal] Add Code Complexity(CoCom) & Code License(CoLic) panels **`/cp3`**
 
 
 **#** **Repository: metrics** **`/working-branches`**
@@ -131,7 +140,7 @@ Issues opened:
 ### Coding Period 3 - July 26th to August 19th, 2019
 
 + Week #9: [Summary](./work/week9) | Blog Post: [[week-9] The Final Coding Phase](https://inishchith.github.io/blog/2019/08/coding-period-3-9.html)
-
++ Week #10: [Summary](./week10/readme.md) | Blog Post: [[week-10] Regression testing & Evaluating results](https://inishchith.github.io/blog/2019/08/coding-period-3-10.html)
 
 <br>
 
