@@ -141,6 +141,7 @@ Issues opened:
 
 + Week #9: [Summary](./work/week9) | Blog Post: [[week-9] The Final Coding Phase](https://inishchith.github.io/blog/2019/08/coding-period-3-9.html)
 + Week #10: [Summary](./week10/readme.md) | Blog Post: [[week-10] Regression testing & Evaluating results](https://inishchith.github.io/blog/2019/08/coding-period-3-10.html)
++ Week #11: Blog Post: [[week-n] The Final Report ☀️](https://inishchith.github.io/blog/2019/08/coding-period-3-11.html)
 
 <br>
 
