@@ -33,6 +33,17 @@
 
 <br>
 
+## # Work Product
+
+> A short video of the final product
+
+<div align="center">
+
+[![GSoC 2019: chaoss x inishchith](http://img.youtube.com/vi/RXZeuJt0UXM/0.jpg)](http://www.youtube.com/watch?v=RXZeuJt0UXM)
+
+</div>
+
+
 ## # Pull Requests & Issues
 
 **#** **Repository: grimoirelab-graal** [**`/working-branches`**](https://github.com/inishchith/grimoirelab-graal/branches)
